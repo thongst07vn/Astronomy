@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MenuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,5 @@ use App\Http\Controllers\LoginController;
 Route::get('/login',[LoginController::class,'show']);
 Route::post('/login',[LoginController::class,'signup']);
 Route::post('/home',[LoginController::class,'signin']);
+Route::get('/index',[MenuController::class,'index']);
+Route::get('/about',[MenuController::class,'about']);
