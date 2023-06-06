@@ -1,8 +1,8 @@
 @extends('layout')
 @section('content')
-<header>
+
   <x-menu menu="index"/>
-</header>
+
 
 <main>
   <div style="padding-left:16px">
