@@ -35,7 +35,7 @@ body{
 }
 header{
     /* background-color: rgb(32,33,36); */
-    background-image: url(../../public/image/lonetrail.gif);
+    background-image: url(../../public/image/header.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -165,16 +165,15 @@ header > nav > a > div{
     background: rgb(255,118,93);
     border-radius: 5px ;
     box-sizing:  unset;
+    color: white;
 }
 header > nav > a >  div > span{
     margin: 12px 0 0 0;
 }
 header > nav > a > div > span > svg, header > nav > a > div > p{
-    color: white;
     margin: 0;
 }
-header > nav > a > div:hover > p,
-header > nav > a > div:hover > span >svg{
+header > nav > a > div:hover{
     transition: 0.3s color;
     color: black;
 }

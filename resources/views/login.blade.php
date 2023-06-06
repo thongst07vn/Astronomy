@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>KONECTIVE FURNITURE</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" defer></script>
-	<link rel="icon" href="IMAGE/icon.png">
+	<link rel="icon" href="image/logo.jpg">
 	@vite(['resources/css/login.css','resources/js/login.js'])
 </head>
 <body>

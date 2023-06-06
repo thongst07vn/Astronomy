@@ -1,9 +1,6 @@
 @extends('layout')
 @section('content')
-
-  <x-menu menu="about"/>
-
-
+<x-menu menu="about"/>
 <main>
   <div style="padding-left:16px">
     <h1>About</h1>
@@ -12,5 +9,4 @@
     <p>Resize the browser window to see the responsive effect.</p>
   </div>
 </main>
-
 @endsection
