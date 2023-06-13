@@ -1,0 +1,133 @@
+*{
+	box-sizing: border-box;
+}
+body {
+/* background: white; */
+	display: flex;
+	background: url(../../public/image/login.jpg);
+	background-size: 1980px 1080px;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	height: 100vh;
+	margin: 10px 0 50px;
+	overflow: hidden;
+	user-select: none;
+}
+
+h1 {
+	font-weight: bold;
+	margin: 0;
+}
+form > h1 {
+	color: white;
+}
+p {
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+}
+
+span {
+	color: white;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+button {
+	border-radius: 20px;
+	background: none;
+	border: 1px solid white;
+	color: white;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-size: 20px;
+	transition: transform 80ms ease-in;
+}
+button:hover{
+	cursor: pointer;
+}
+button:active {
+	transform: scale(0.95);
+}
+
+button:focus {
+	outline: none;
+}
+form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+.right-panel-active{
+	transform: translateX(-50%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+}
+@keyframes show {
+	0%, 49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+input{
+	background: none;
+	outline: none;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	border-radius: 50px;
+	box-shadow: inset 2px 4px 10px rgb(48,44,44);
+	color: white;
+	font-size: 25px;
+	width: 500px;
+}
+.container {
+	background: url(../../public/image/login.jpg);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	background-size: 1280px 720px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 10px;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+	font-size: 20px;
+	color: white;
+}
+.hiden{
+	opacity: 0;
+}
+ul{
+	display: inline;
+	padding: 0 0 0 10px;
+}
+#one,#two,#three,#four{
+	backdrop-filter: blur(15px);
+	margin: 0 10px;
+	height: 80px;
+	width: 80px;
+}

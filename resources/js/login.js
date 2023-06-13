@@ -2,41 +2,41 @@
 let checklength = new RegExp("^(?=.{8,20})");
 let checkupper = new RegExp("^(?=.*[A-Z])");
 let checknum = new RegExp("^(?=.*[0-9])");
-let PassWordSignUp = document.querySelector('#Sign-Up > form > input:nth-child(5)');
-let RePassWordSignUp = document.querySelector('#Sign-Up > form > input:nth-child(7)');
-let PassWordSignIn = document.querySelector('#Sign-In > form > input:nth-child(5)');
+let PassWordSignUp = document.querySelector('#Sign-Up > form > input:nth-child(2)');
+let RePassWordSignUp = document.querySelector('#Sign-Up > form > input:nth-child(4)');
+let PassWordSignIn = document.querySelector('#Sign-In > form > input:nth-child(2)');
 let checkbox = document.querySelector('.checklist').getElementsByTagName('li');
 //hide password
-document.querySelector('#Sign-Up > form > span:nth-child(6)').addEventListener('click', () =>{
+document.querySelector('#Sign-Up > form > span:nth-child(3)').addEventListener('click', () =>{
     if (PassWordSignUp.type === "password") {
-        document.querySelector('#Sign-Up > form > span:nth-child(6) >svg').classList.remove('fa-eye-slash');
-        document.querySelector('#Sign-Up > form > span:nth-child(6) >svg').classList.add('fa-eye');
+        document.querySelector('#Sign-Up > form > span:nth-child(3) >svg').classList.remove('fa-eye-slash');
+        document.querySelector('#Sign-Up > form > span:nth-child(3) >svg').classList.add('fa-eye');
         PassWordSignUp.type = "text";
     } else {
-        document.querySelector('#Sign-Up > form > span:nth-child(6) >svg').classList.remove('fa-eye');
-        document.querySelector('#Sign-Up > form > span:nth-child(6) >svg').classList.add('fa-eye-slash');
+        document.querySelector('#Sign-Up > form > span:nth-child(3) >svg').classList.remove('fa-eye');
+        document.querySelector('#Sign-Up > form > span:nth-child(3) >svg').classList.add('fa-eye-slash');
         PassWordSignUp.type = "password";
     }
 })
-document.querySelector('#Sign-Up > form > span:nth-child(8)').addEventListener('click', () =>{
+document.querySelector('#Sign-Up > form > span:nth-child(5)').addEventListener('click', () =>{
     if (RePassWordSignUp.type === "password") {
-        document.querySelector('#Sign-Up > form > span:nth-child(8) >svg').classList.remove('fa-eye-slash');
-        document.querySelector('#Sign-Up > form > span:nth-child(8) >svg').classList.add('fa-eye');
+        document.querySelector('#Sign-Up > form > span:nth-child(5) >svg').classList.remove('fa-eye-slash');
+        document.querySelector('#Sign-Up > form > span:nth-child(5) >svg').classList.add('fa-eye');
         RePassWordSignUp.type = "text";
     } else {
-        document.querySelector('#Sign-Up > form > span:nth-child(8) >svg').classList.remove('fa-eye');
-        document.querySelector('#Sign-Up > form > span:nth-child(8) >svg').classList.add('fa-eye-slash');
+        document.querySelector('#Sign-Up > form > span:nth-child(5) >svg').classList.remove('fa-eye');
+        document.querySelector('#Sign-Up > form > span:nth-child(5) >svg').classList.add('fa-eye-slash');
         RePassWordSignUp.type = "password";
     }
 })
-document.querySelector('#Sign-In > form > span:nth-child(6)').addEventListener('click', () =>{
+document.querySelector('#Sign-In > form > span:nth-child(3)').addEventListener('click', () =>{
     if (PassWordSignIn.type === "password") {
-        document.querySelector('#Sign-In > form > span:nth-child(6) >svg').classList.remove('fa-eye-slash');
-        document.querySelector('#Sign-In > form > span:nth-child(6) >svg').classList.add('fa-eye');
+        document.querySelector('#Sign-In > form > span:nth-child(3) >svg').classList.remove('fa-eye-slash');
+        document.querySelector('#Sign-In > form > span:nth-child(3) >svg').classList.add('fa-eye');
         PassWordSignIn.type = "text";
     } else {
-        document.querySelector('#Sign-In > form > span:nth-child(6) >svg').classList.remove('fa-eye');
-        document.querySelector('#Sign-In > form > span:nth-child(6) >svg').classList.add('fa-eye-slash');
+        document.querySelector('#Sign-In > form > span:nth-child(3) >svg').classList.remove('fa-eye');
+        document.querySelector('#Sign-In > form > span:nth-child(3) >svg').classList.add('fa-eye-slash');
         PassWordSignIn.type = "password";
     }
 })
@@ -86,9 +86,9 @@ let container = document.getElementById('container');
 signUpButton.addEventListener('click', () => {
 	container.classList.add("right-panel-active");
 	document.getElementById('signin').reset();
-	document.querySelector('#Sign-In > form > span:nth-child(6) >svg').classList.remove('fa-eye');
-    document.querySelector('#Sign-In > form > span:nth-child(6) >svg').classList.add('fa-eye-slash');
-	document.querySelector('#Sign-In > form > input:nth-child(5)').type="password";
+	document.querySelector('#Sign-In > form > span:nth-child(3) >svg').classList.remove('fa-eye');
+    document.querySelector('#Sign-In > form > span:nth-child(3) >svg').classList.add('fa-eye-slash');
+	document.querySelector('#Sign-In > form > input:nth-child(2)').type="password";
 	document.getElementById('Sign-In').classList.add("fade-out");
 	document.getElementById('Sign-In').classList.remove("fade-in");
 	document.getElementById('Sign-Up').classList.remove("fade-out");
@@ -98,12 +98,12 @@ signUpButton.addEventListener('click', () => {
 signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 	document.getElementById('signup').reset();
-	document.querySelector('#Sign-Up > form > span:nth-child(8) >svg').classList.remove('fa-eye');
-    document.querySelector('#Sign-Up > form > span:nth-child(8) >svg').classList.add('fa-eye-slash');
-    document.querySelector('#Sign-Up > form > span:nth-child(6) >svg').classList.remove('fa-eye');
-    document.querySelector('#Sign-Up > form > span:nth-child(6) >svg').classList.add('fa-eye-slash');
-	document.querySelector('#Sign-Up > form > input:nth-child(7)').type="password"
-	document.querySelector('#Sign-Up > form > input:nth-child(5)').type="password"
+	document.querySelector('#Sign-Up > form > span:nth-child(5) >svg').classList.remove('fa-eye');
+    document.querySelector('#Sign-Up > form > span:nth-child(5) >svg').classList.add('fa-eye-slash');
+    document.querySelector('#Sign-Up > form > span:nth-child(3) >svg').classList.remove('fa-eye');
+    document.querySelector('#Sign-Up > form > span:nth-child(3) >svg').classList.add('fa-eye-slash');
+	document.querySelector('#Sign-Up > form > input:nth-child(4)').type="password"
+	document.querySelector('#Sign-Up > form > input:nth-child(2)').type="password"
 	document.getElementById('Sign-Up').classList.add("fade-out");
 	document.getElementById('Sign-Up').classList.remove("fade-in");
 	document.getElementById('Sign-In').classList.remove("fade-out");

@@ -38,8 +38,8 @@ header{
     background-image: url(../../public/image/header.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    /* background: transparent; */
     background-position: bottom;
-    transition: tra;
     display: flex;
     /* padding-bottom: -40px; */
     position: sticky;

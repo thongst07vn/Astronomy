@@ -49,12 +49,20 @@ return [
         'ses' => [
             'transport' => 'ses',
         ],
-
+        'default' => env('MAIL_MAILER', 'mailgun'),
+        'driver' => env('MAIL_DRIVER','stmp'),
+        'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+        'port' => env('MAIL_PORT', 587),
         'mailgun' => [
             'transport' => 'mailgun',
             // 'client' => [
             //     'timeout' => 5,
             // ],
+            'username' => env('MAIL_USERNAME'),
+            'password' => env('MAIL_PASSWORD'),
+            'domain' => env('MAILGUN_DOMAIN'),
+            'secret' => env('MAILGUN_SECRET'),
+            'encryption' => env('MAIL_ENCRYPTION', 'tls'),
         ],
 
         'postmark' => [
@@ -99,8 +107,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'Astonomy@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'Astronomy'),
     ],
 
     /*

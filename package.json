@@ -11,6 +11,8 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-svg-core": "^6.4.0"
+        "@fortawesome/fontawesome-svg-core": "^6.4.0",
+        "jquery": "^3.7.0",
+        "three": "^0.153.0"
     }
 }

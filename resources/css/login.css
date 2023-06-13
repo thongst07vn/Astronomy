@@ -248,36 +248,22 @@ input {
 	transform: translateX(20%);
 }
 
-.social-container {
-	margin: 20px 0;
-}
-
-.social-container a {
-	border: 1px solid white;
-	border-radius: 50%;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0 5px;
-	height: 40px;
-	width: 40px;
-}
-#Sign-In > form > span:nth-child(6){
+#Sign-In > form > span:nth-child(3){
 	position: absolute;
 	font-size: 13px;
-	top: 279px;
+	top: 245px;
 	left: 300px;
 }
-#Sign-Up > form > span:nth-child(6){
+#Sign-Up > form > span:nth-child(3){
 	position: absolute;
 	font-size: 13px;
-	top: 221px;
+	top: 188px;
 	left: 300px;
 }
-#Sign-Up > form > span:nth-child(8){
+#Sign-Up > form > span:nth-child(5){
 	position: absolute;
 	font-size: 13px;
-	top: 275px;
+	top: 245px;
 	left: 300px;
 }
 a, button{
@@ -309,7 +295,7 @@ ul svg{
 }
 #checkbox{
 	position: absolute;
-	top: 320px;
+	top: 285px;
 	left: -145px;
 	padding: 12px 15px;
 	margin: 8px 0;
@@ -319,12 +305,12 @@ ul svg{
 }
 label{
 	position: absolute;
-	top: 326px;
+	top: 291px;
 	left: 60px;
-	font-size: 14px;
+	font-size: 16px;
 	color: white;	
 }
-#Sign-In > form > a:nth-child(9){
+#Sign-In > form > a:nth-child(6){
 	position: relative;
 	top: -5px;
 	left: 80px;
@@ -335,4 +321,16 @@ label{
     color: red;
     font-size: 20px;
     top: 425px;
+}
+.titleSI{
+	position: relative;
+	color: white;
+	top: 100px;
+	left: 40%;
+}
+.titleSU{
+	position: relative;
+	color: white;
+	top: 50px;
+	left: 30%;
 }

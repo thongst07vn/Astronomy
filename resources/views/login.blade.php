@@ -8,17 +8,10 @@
 	@vite(['resources/css/login.css','resources/js/login.js'])
 </head>
 <body>
-    <header></header>
-    <section class="container" id="container">
+	<section class="container" id="container">
 		<div class="form-container sign-up-container" id="Sign-Up">
+			<h1 class="titleSU">Create Account</h1>
 			<form action="/login" id="signup" method='post'>
-				<h1>Create Account</h1>
-				<div class="social-container">
-					<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-					<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-					<a href="#" class="social"><i class="fa-brands fa-youtube"></i></a>
-				</div>
-				<span>or use your email for registration</span>
 				<input type="text" placeholder="Email" name='username'/>
 				<input type="password" placeholder="Password" name='passwords'/>
 				<span><i class="fa-solid fa-eye-slash"></i></span>
@@ -35,20 +28,14 @@
 			</form>
 		</div>
 		<div class="form-container sign-in-container" id="Sign-In">
-			<form action="/home" id="signin" method="post">
-				<h1>Sign in</h1>
-				<div class="social-container">
-					<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-					<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-					<a href="#" class="social"><i class="fa-brands fa-youtube"></i></a>
-				</div>
-				<span>or use your account</span>
+			<h1 class="titleSI">Sign in</h1>
+			<form action="/index" id="signin" method="post">
 				<input type="text" placeholder="Email" name='usernamesignin'/>
 				<input type="password" placeholder="Password" name='passwordssignin'/>
 				<span ><i class="fa-solid fa-eye-slash"></i></span>
 				<input type="checkbox" name="checkbox" id="checkbox" value="lsRememberMe">
 				<label for="checkbox">Remember Me</label>
-				<a href="#">Forgot your password?</a>
+				<a href="/login/forgotpasswword">Forgot your password?</a>
 				<span class="tb">{{session('tb')}}</span>
 				<button type='submit'>Sign In</button>
 			</form>
@@ -68,6 +55,5 @@
 			</div>
 		</div>
     </section>
-    <footer></footer>
 </body>
 </html>

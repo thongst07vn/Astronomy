@@ -9,11 +9,16 @@ use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\HASH;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ForgotPassword;
 class LoginController extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
+    public function forgot(): View{
+        return view('forgot.forgot');
+    }
     public function show(): View{
-        return view('login');
+        return view('layouts.index');
     }
     public function shows(): View{
         return view('login');
@@ -71,6 +76,17 @@ class LoginController extends BaseController
     public function signout(Request $REQUEST){
         $r = $REQUEST->session()->flush();
         return redirect('login');
+    }
+    public function forgotmail(Request $REQUEST):View{
+        $email = $REQUEST->email;
+        $content = mt_rand(1000,9999);
+        $check =$REQUEST->session()->put('OTP',$content);
+        $mailable = new ForgotPassword($content);
+        Mail::to($email)->send($mailable);
+        return view('forgot.OTP');
+    }
+    public function checkotp(Request $REQUEST):View{
+        $otp = $REQUEST->session()->get('OTP');
     }
 }
     
