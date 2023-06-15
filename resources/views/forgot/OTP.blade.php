@@ -8,7 +8,7 @@
 <body>
     <section class="container">
         <h2>OTP Verification</h2>
-        <form action="" class="form-container" data-animate-effect="fadeIn">
+        <form action="resetpassword" class="form-container" data-animate-effect="fadeIn">
             <div class="alert alert-success" role="alert">Enter Your OTP</div>
             <ul id="otp">
                 <input type="text" id="one" name ="one" maxlength="1">
@@ -16,6 +16,7 @@
                 <input type="text" id="three" name ="three" maxlength="1">
                 <input type="text" id="four" name ="four" maxlength="1">
             </ul>
+            <p>{{$tam}}</p>
             <button type='submit' id='bt2'>Submit</button>
         </form>
     </section>

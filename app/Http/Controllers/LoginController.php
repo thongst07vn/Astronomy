@@ -79,14 +79,42 @@ class LoginController extends BaseController
     }
     public function forgotmail(Request $REQUEST):View{
         $email = $REQUEST->email;
-        $content = mt_rand(1000,9999);
+        $chekcemail=$REQUEST->session()->put('email',$email);
+        $text="ZXCVBNMASDFGHJKLQWERTYUIOP";
+        $content =mt_rand(0,9).$text[rand(0, strlen($text) - 1)].mt_rand(0,9).$text[rand(0, strlen($text) - 1)];
+        $tam = '';
         $check =$REQUEST->session()->put('OTP',$content);
         $mailable = new ForgotPassword($content);
         Mail::to($email)->send($mailable);
-        return view('forgot.OTP');
+        return view('forgot.OTP', ['tam'=>$tam]);
     }
     public function checkotp(Request $REQUEST):View{
         $otp = $REQUEST->session()->get('OTP');
+        $tam = '';
+        $number = ($REQUEST->one).($REQUEST->two).($REQUEST->three).($REQUEST->four);
+        if($otp == $number){
+            return view('forgot.resetpassword');
+        }else { 
+            $tam = "Sai OTP";
+            return view('forgot.OTP',['tam' => $tam]);
+        }
+    }
+    public function reset(Request $REQUEST){
+        $email=$REQUEST->session()->get('email');
+        $passwords = $REQUEST ->passwords;
+        $repasswords = $REQUEST ->repasswords;   
+        if(!preg_match("/^(?=.{8,20})(?=.*[A-Z])(?=.*[0-9])/i",$passwords)){
+            return redirect()->back();
+        }else{
+            if($passwords == $repasswords){
+                DB::update(
+                    'update Loginuser set passwords = ? where username = ?',[HASH::make($passwords),$email]
+                );
+                return redirect('index');
+            }else{
+                return redirect()->back();
+            }
+        }
     }
 }
     

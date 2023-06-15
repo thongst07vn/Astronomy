@@ -1,10 +1,13 @@
+const geometry = new THREE.SphereGeometry( 15, 32, 16 ); 
+const material = new THREE.MeshBasicMaterial( { color: 0xffff00 } ); 
+const sphere = new THREE.Mesh( geometry, material );
 define(
 [
   'Environment/Constants'
 ],
 function(Constants) {
   'use strict';
-
+  
   class Orbit {
     constructor(object, color) {
       this._object = object;
@@ -12,7 +15,7 @@ function(Constants) {
       this._orbit = this.createOrbit();
       this.setOrbitInclination();
     }
-
+    
     get orbit() {
       return this._orbit;
     }
@@ -39,7 +42,7 @@ function(Constants) {
       for (var i = 0; i <= resolution; i++) {
         var segment = (i * length) * Math.PI / 180;
         var orbitAmplitude = this._object.threeParent.threeRadius + this._object.threeDistanceFromParent;
-
+        
         orbitLine.vertices.push(
           new THREE.Vector3(
             Math.cos(segment) * orbitAmplitude,
@@ -48,7 +51,7 @@ function(Constants) {
           )
         );
       }
-
+      
       var line = new THREE.Line(orbitLine, material);
 
       line.position.set(0, 0, 0);

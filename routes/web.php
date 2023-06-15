@@ -19,6 +19,8 @@ Route::get('/login',[LoginController::class,'shows']);
 Route::post('/login',[LoginController::class,'signup']);
 Route::get('/login/forgotpasswword',[LoginController::class,'forgot']);
 Route::get('/login/forgotpasswword/otp',[LoginController::class,'forgotmail']);
+Route::get('/login/forgotpasswword/resetpassword',[LoginController::class,'checkotp']);
+Route::post('/login/forgotpasswword/resetpassword',[LoginController::class,'reset']);
 Route::post('/index',[LoginController::class,'signin']);
 Route::get('/',[MenuController::class,'index']);
 Route::get('/index',[MenuController::class,'index']);
