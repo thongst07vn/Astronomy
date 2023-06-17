@@ -61,7 +61,7 @@ class LoginController extends BaseController
             foreach($mangpassword as $check){
                 if(Hash::check($passwordssigin,$check->passwords)){
                     $r=$REQUEST->session()->put('username1',$usernamesignin);
-                    return redirect('login');
+                    return redirect('index');
 
                 }else{
                     $tb = 'Password Incorrect';

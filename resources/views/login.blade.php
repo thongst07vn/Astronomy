@@ -12,10 +12,10 @@
 		<div class="form-container sign-up-container" id="Sign-Up">
 			<h1 class="titleSU">Create Account</h1>
 			<form action="/login" id="signup" method='post'>
-				<input type="text" placeholder="Email" name='username'/>
-				<input type="password" placeholder="Password" name='passwords'/>
+				<input type="text" placeholder="Email" name='username' autocomplete="off"/>
+				<input type="password" placeholder="Password" name='passwords' autocomplete="off"/>
 				<span><i class="fa-solid fa-eye-slash"></i></span>
-				<input type="password" placeholder="Re-Password" name='repasswords' />
+				<input type="password" placeholder="Re-Password" name='repasswords' autocomplete="off"/>
 				<span><i class="fa-solid fa-eye-slash"></i></span>
 				<ul class="checklist hiden">
 					<li><i class="fa-solid fa-x"></i> Uppercase Letter</li>
@@ -30,8 +30,8 @@
 		<div class="form-container sign-in-container" id="Sign-In">
 			<h1 class="titleSI">Sign in</h1>
 			<form action="/index" id="signin" method="post">
-				<input type="text" placeholder="Email" name='usernamesignin'/>
-				<input type="password" placeholder="Password" name='passwordssignin'/>
+				<input type="text" placeholder="Email" name='usernamesignin' autocomplete="off"/>
+				<input type="password" placeholder="Password" name='passwordssignin' autocomplete="off"/>
 				<span ><i class="fa-solid fa-eye-slash"></i></span>
 				<input type="checkbox" name="checkbox" id="checkbox" value="lsRememberMe">
 				<label for="checkbox">Remember Me</label>

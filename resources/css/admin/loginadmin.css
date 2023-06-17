@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+  }
+body {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #141e30;
+    height: 100vh;
+    user-select: none;
+    overflow: hidden;
+	/* background: linear-gradient(90deg ,#141e30, #243b55); */
+}
+section {
+    display: flex;
+	justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+section h2 {
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+}
+
+section div {
+    position: relative;
+}
+
+section div input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+section div svg{
+    color: #fff;
+    font-size: 25px;
+    position: absolute;
+    top: 25px;
+    left: -40px;
+}
+section div input:focus ~ svg,
+section div input:valid ~ svg{
+    color: #03e9f4;
+}
+section div label {
+    position: absolute;
+    top:0;
+    left: 5px;
+    padding: 10px 0;
+    font-size: 25px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+section div input:focus ~ label,
+section div input:valid ~ label {
+    top: -25px;
+    color: #03e9f4;
+    font-size: 20px;
+}
+
+section form button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .2s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    border: 3px solid #03e9f4;
+    border-radius: 50px; 
+    background-color: transparent;
+}
+
+section button:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 15px #03e9f4,
+                0 0 15px #03e9f4,
+                0 0 15px #03e9f4;
+}

@@ -12,6 +12,7 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.4.0",
+        "ckeditor4": "^4.21.0",
         "jquery": "^3.7.0",
         "three": "^0.153.0"
     }

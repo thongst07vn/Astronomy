@@ -10,9 +10,9 @@
     <section class="container" id="reset">
         <h2>Reset Password</h2>
         <form action="resetpassword" method='post'>
-            <input type="password" placeholder="Password" name='passwords'/>
+            <input type="password" placeholder="Password" name='passwords' autocomplete="off"/>
             <span><i class="fa-solid fa-eye-slash"></i></span>
-            <input type="password" placeholder="Re-Password" name='repasswords' />
+            <input type="password" placeholder="Re-Password" name='repasswords' autocomplete="off"/>
             <span><i class="fa-solid fa-eye-slash"></i></span>
             <ul class="checklist hiden">
                 <li><i class="fa-solid fa-x"></i> Uppercase Letter</li>
