@@ -1,0 +1,79 @@
+#blog-page{
+    height:100%;
+    background-color: #FFFFFF;
+    background-image: url(../../public/image/stary.jpg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.blog-banner {
+    /* position: fixed;
+    top: 0; */
+    width: 15%;
+    height: 800px;
+}
+.blog-content{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    background-color: #005FFD;
+}
+.blog-side{
+    background-color: #001932;
+    flex:80%;
+    display: flex;
+    flex-direction: column;
+    width:80%;
+    height: 100%;
+}
+.side-bar-1{
+    width: 20%;
+    height: 100%;
+    flex:20%;
+}
+/* edit blog 1 */
+.blog1, .blog2{
+    display: flex;
+    flex-direction: row;
+    flex: 33%;
+    width: 100%;
+    height: 33%;
+}
+.blog1 div:nth-child(1), .blog2 div:nth-child(2){
+    flex: 50%;
+    width: 50%;
+    
+}
+.blog1 div:nth-child(1) img,.blog2 div:nth-child(2) img{
+    object-fit: cover;
+    width: 533px;
+    height: 325px;
+    border-radius: 50px;
+}
+.blog1 div:nth-child(2),.blog2 div:nth-child(1){
+    flex: 50%;
+    width: 50%;
+}
+.blog1 div:nth-child(2) p,
+.blog1 div:nth-child(2) h2,
+.blog2 div:nth-child(1) p,
+.blog2 div:nth-child(1) h2{
+    color: white;
+    padding: 0 20px;
+    line-break: anywhere;
+}
+.read-more{
+    width: 140px;
+    height: 55px;
+    color: white;
+    background: transparent;
+    position: relative;
+    left: 70px;
+    top: 0;
+    border: 2px solid white;
+    font-size: 20px;
+}
+.read-more:hover{
+    background-color: #005FFD;
+    cursor: pointer;
+}

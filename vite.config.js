@@ -13,7 +13,9 @@ export default defineConfig({
                     'resources/css/admin/loginadmin.css', 
                     'resources/js/admin/admin.js',
                     'resources/css/main.css',
-                    'resources/js/app.js'],
+                    'resources/js/app.js',
+                    'resources/css/blog.css'
+                ],
             refresh: true,
         }),
     ],

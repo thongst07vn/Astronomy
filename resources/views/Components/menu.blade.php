@@ -9,7 +9,7 @@
                 <li @class(['activeli' => $menu == 'index'])><a @class(['active1' => $menu == 'index']) href="home">HOME</a></li>
                 <li><a href="planet">PLANET</a></li>
                 <li><a href="constellation">CONSTELLATION</a></li>
-                <li><a href="blog">BLOG</a></li>
+                <li @class(['activeli' => $menu == 'blog'])><a @class(['active1' => $menu == 'blog']) href="blog">BLOG</a></li>
                 <li @class(['activeli' => $menu == 'about'])><a @class(['active1' => $menu == 'index']) href="about">ABOUT US</a></li>
             </ul>
         </nav>

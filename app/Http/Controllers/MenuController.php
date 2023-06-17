@@ -23,17 +23,10 @@ class MenuController extends BaseController
         $menu ='index';
         return view('layouts.index',['menu' => $menu]);
     }
-    public function signup(Request $REQUEST): View{
-        
-        return view('signup');
-    }
-    public function shop(Request $REQUEST): View{
-        
-        return view('shop');
-    }
-    public function shop2(Request $REQUEST): View{
-        
-        return view('shop2');
+    public function blog(Request $REQUEST): View{
+        $blog = DB::Select('select * from blogsum');
+        $menu ='blog';
+        return view('layouts.blog',['menu' => $menu, 'blog'=>$blog]);
     }
 
 

@@ -35,3 +35,4 @@ Route::post('/home',[LoginController::class,'signin']);
 Route::get('/',[MenuController::class,'index']);
 Route::get('/index',[MenuController::class,'index']);
 Route::get('/about',[MenuController::class,'about']);
+Route::get('/blog',[MenuController::class,'blog']);

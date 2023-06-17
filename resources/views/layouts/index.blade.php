@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-
+@vite(['resources/css/app.css','resources/css/main.css'])
 <x-menu menu="index"/>
 <nav id="browser-compatibility-modal" class="reveal browser-compatibility-modal">
     <h3>Browser Compatibility</h3>
@@ -75,4 +75,11 @@
     <a id="info-got-it" class="button large" data-close="info">Close</a>
 </nav>
 
+<script type="text/javascript" href="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&subagency=EyesOnTheSolarSystem&dclink=true&sp=search,s,q&sdor=false&exts=tif,tiff" defer></script>
+    <script type="text/javascript" src="{{asset('src/app/vendor/jquery/dist/jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('src/app/vendor/foundation-sites/dist/foundation.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('src/app/vendor/stats/build/stats.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('src/app/vendor/tweenjs/build/tween.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('src/app/vendor/three.js/three.min.js')}}"></script>
+    <script data-main="src/app/app" src="{{asset('src/app/vendor/requirejs/require.js')}}"></script>
 @endsection
