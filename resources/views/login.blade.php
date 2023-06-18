@@ -23,7 +23,6 @@
 					<li><i class="fa-solid fa-x"></i> 8 - 20 Characters</li>
 					<li>incorrect Re-Password</li>
 				</ul>
-				<span class="tb">{{session('tbs')}}</span>
 				<button type='submit'>Sign Up</button>
 			</form>
 		</div>

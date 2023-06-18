@@ -25,23 +25,24 @@ class AdminController extends BaseController
         return view('admin.loginadmin');
     }
     public function signin(Request $REQUEST){
-        $usernamesignin = $REQUEST -> usernamesignin;
-        $passwordssigin = $REQUEST -> passwordssignin;
-        $manguser = DB::select("select admin from Loginuser where username=?",[$usernamesignin]);
-        $mangpassword = DB::select("select admin from Loginuser where username=?",[$usernamesignin]);
+        $admin = $REQUEST -> admin;
+        $passwords = $REQUEST -> passwords;
+        $manguser = DB::select("select admin from Loginadmin where admin=?",[$admin]);
+        $mangpassword = DB::select("select passwords from Loginadmin where admin=?",[$admin]);
         
         if(count($manguser)){
-            if(Hash::check($passwordssigin,$check->passwords)){
-                $r=$REQUEST->session()->put('username1',$usernamesignin);
-                return redirect('admin.dashboard');
+            foreach($mangpassword as $check){
+                if(Hash::check($passwords,$check->passwords)){
+                    return redirect('admin/dashboard');
 
-            }else{
-                $tb = 'Password Incorrect';
-                return redirect('admin.loginadmin')->with('tb',$tb);
+                }else{
+                    $tb = 'Password Incorrect';
+                    return redirect('admin')->with('tb',$tb);
+                }
             }
         }else{
-            $tb = 'Email Incorrect';
-            return redirect('admin.loginadmin')->with('tb',$tb);
+            $tb = 'User Incorrect';
+            return redirect('admin')->with('tb',$tb);
         }
     }
     public function signout(Request $REQUEST){

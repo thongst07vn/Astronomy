@@ -9,22 +9,23 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-        @vite(['resources/css/admin/loginadmin.css'])
+        @vite(['resources/css/admin/loginadmin.css','resources/js/admin/loginadmin.js'])
     </head>
     <body>
         <section>
             <form action="/admin/dashboard" id="signup" method='post'>
                 <h2>Login</h2>
                 <div>
-                    <input type="text" name="" required="">
+                    <input type="text" name="admin" required oninput="this.setCustomValidity('')" autocomplete="off">
                     <i class="fa fa-user"></i>
                     <label>Username</label>
                 </div>
                 <div>
-                    <input type="password" name="" required="">
+                    <input type="password" name="passwords" required autocomplete="off">
                     <i class="fa fa-key"></i>
                     <label>Password</label>
                 </div>
+                <h2 class="tb">{{session('tb')}}</h2>
                 <button type='submit'>Sign In</button>
             </form>
         </section>
