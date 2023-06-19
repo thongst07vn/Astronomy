@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,7 @@ Route::get('/admin',[AdminController::class,'shows']);
 Route::post('/admin/dashboard',[AdminController::class,'signin']);
 Route::get('/admin/dashboard',[AdminController::class,'show']);
 Route::get('/admin/table',[AdminController::class,'showtb']);
+Route::post('/admin/form',[BlogController::class,'editor']);
 Route::get('/admin/form',[AdminController::class,'showf']);
 
 

@@ -13,7 +13,7 @@
     </head>
     <body>
         <section>
-            <form action="/admin/dashboard" id="signup" method='post'>
+            <form action="/admin/dashboard" method='post'>
                 <h2>Login</h2>
                 <div>
                     <input type="text" name="admin" required oninput="this.setCustomValidity('')" autocomplete="off">

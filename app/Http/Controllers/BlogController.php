@@ -18,5 +18,15 @@ class BlogController extends Controller
     public function postedit(Request $REQUEST):View{
         return view('layouts.blogdetail');
     }
-
+    public function editor(Request $REQUEST){
+        $edit = $REQUEST -> floatingTextarea;
+        $contentsql = htmlentities(htmlentities($edit));
+            if(Str::contains($edit,'</h1>') == true){
+                $headtitle=strtok($edit,'</h1>');
+            }else{
+                $headtitle='<h1>This Is Title</h1>';
+            }
+        DB::insert("insert into blogsum(headtitle, content) values (?,?)",[$headtitle,$contentsql]);
+        return redirect()->back();
+    }
 }
