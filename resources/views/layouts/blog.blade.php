@@ -13,8 +13,8 @@
                 <img src="image/bigbang.jpg" alt="">
               </div>
               <div>
-                <h2>{{$i->headtitle}}</h2>
-                <p>{{Str::limit($i->content, 297)}}</p>
+                {{$i->headtitle}}
+                {{Str::limit($i->content, 297)}}
                 <input type="button" value="Read more" class="read-more">
               </div>
             </div>
@@ -22,8 +22,8 @@
             @if($i->id%2==0)
             <div class='blog2'>
               <div>
-                <h2>{{$i->headtitle, 20}}</h2>
-                <p>{{Str::limit($i->content, 297)}}...</p>
+                <h1>{{$i->headtitle, 20}}</h1>
+                {{!!html_entity_decode(Str::limit($i->content, 297))!!}}
                 <input type="button" value="Read more" class="read-more">
               </div>
               <div>

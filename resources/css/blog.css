@@ -55,9 +55,9 @@
     width: 50%;
 }
 .blog1 div:nth-child(2) p,
-.blog1 div:nth-child(2) h2,
+.blog1 div:nth-child(2) h1,
 .blog2 div:nth-child(1) p,
-.blog2 div:nth-child(1) h2{
+.blog2 div:nth-child(1) h1{
     color: white;
     padding: 0 20px;
     line-break: anywhere;
