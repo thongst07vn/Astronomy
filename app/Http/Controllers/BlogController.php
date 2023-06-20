@@ -30,7 +30,16 @@ class BlogController extends Controller
             }else{
                 $headtitle='<h1>This Is Title</h1>';
             }
+<<<<<<< HEAD
         // DB::insert("insert into blogsum(headtitle, content) values (?,?)",[$headtitle,$contentsql]);
         // return redirect('admin/form');
+=======
+        DB::insert("insert into blogsum(headtitle, content) values (?,?)",[$headtitle,substr(strstr($contentsql,htmlentities('</h1>')),11)]);
+        return redirect()->back();
+    }
+    public function Create(Request $REQUEST){
+        DB::select("select username from Loginuser where username=?");
+        return redirect()->back();
+>>>>>>> c7b68b406275a00ef9afe0f499b4f2223d933a84
     }
 }

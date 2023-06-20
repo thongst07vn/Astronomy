@@ -28,7 +28,11 @@ Route::get('/admin',[AdminController::class,'shows']);
 Route::post('/admin/dashboard',[AdminController::class,'signin']);
 Route::get('/admin/dashboard',[AdminController::class,'show']);
 Route::get('/admin/table',[AdminController::class,'showtb']);
+<<<<<<< HEAD
 Route::post('/admin/form',[BlogController::class,'create']);
+=======
+Route::post('/admin/form',[BlogController::class,'editor']);
+>>>>>>> c7b68b406275a00ef9afe0f499b4f2223d933a84
 Route::get('/admin/form',[BlogController::class,'showf']);
 
 
