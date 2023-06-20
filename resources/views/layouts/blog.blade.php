@@ -13,17 +13,17 @@
                 <img src="image/bigbang.jpg" alt="">
               </div>
               <div>
-                {{$i->headtitle}}
-                {{Str::limit($i->content, 297)}}
-                <input type="button" value="Read more" class="read-more">
+                <h1>{!!html_entity_decode(Str::limit($i->headtitle, 100))!!}</h1>
+                {!!html_entity_decode(Str::limit($i->content, 297))!!}
+                <a href="blog/{{$i->id}}">Read More</a>
               </div>
             </div>
             @endif
             @if($i->id%2==0)
             <div class='blog2'>
               <div>
-                <h1>{{$i->headtitle, 20}}</h1>
-                {{!!html_entity_decode(Str::limit($i->content, 297))!!}}
+                <h1>{!!html_entity_decode(Str::limit($i->headtitle, 100))!!}</h1>
+                {!!html_entity_decode(Str::limit($i->content, 297))!!}
                 <input type="button" value="Read more" class="read-more">
               </div>
               <div>

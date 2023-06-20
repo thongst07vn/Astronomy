@@ -23,15 +23,16 @@ class BlogController extends Controller
         $edit = $REQUEST -> floatingTextarea;
         $contentsql = htmlentities($edit);
             if(Str::contains($edit,'</h1>') == true){
-                $headtitle=strtok($edit,'</h1>');
+                $headtitle=strip_tags((strstr($edit,'</h1>', true)."</h1>"), 'h1');
             }else{
                 $headtitle='<h1>This Is Title</h1>';
             }
-        DB::insert("insert into blogsum(headtitle, content) values (?,?)",[$headtitle,substr(strstr($contentsql,htmlentities('</h1>')),11)]);
-        return redirect()->back();
+        // DB::insert("insert into blogsum(headtitle, content) values (?,?)",[$headtitle,substr(strstr($contentsql,htmlentities('</h1>')),11)]);
+        // return redirect()->back();
     }
-    public function Create(Request $REQUEST){
-        DB::select("select username from Loginuser where username=?");
-        return redirect()->back();
+    public function detail(string $id): View{
+        $blog = DB::Select('select * from blogsum');
+        $menu ='blog';
+        return view('layouts.blogdetail',['menu' => $menu, 'blog'=>$blog, 'id' =>$id]);
     }
 }

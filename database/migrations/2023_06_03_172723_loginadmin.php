@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('Loginadmin', function (Blueprint $table) {
             $table->id();
             $table->string('admin');
-            $table->longstring('passwords');
+            $table->string('passwords');
             $table->timestamps();
         });
     }

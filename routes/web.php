@@ -39,3 +39,4 @@ Route::get('/',[MenuController::class,'index']);
 Route::get('/home',[MenuController::class,'index']);
 Route::get('/about',[MenuController::class,'about']);
 Route::get('/blog',[MenuController::class,'blog']);
+Route::get('/blog/{id?}',[BlogController::class,'detail']);
