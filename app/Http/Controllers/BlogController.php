@@ -15,7 +15,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class BlogController extends Controller
 {
-    
+
     public function showf(): View{
         return view('admin.layouts.form');
     }

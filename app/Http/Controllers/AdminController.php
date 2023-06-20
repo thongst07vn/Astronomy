@@ -18,9 +18,7 @@ class AdminController extends BaseController
     public function showtb(): View{
         return view('admin.layouts.table');
     }
-    public function showf(): View{
-        return view('admin.layouts.form');
-    }
+    
     public function shows(): View{
         return view('admin.loginadmin');
     }
