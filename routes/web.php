@@ -28,8 +28,8 @@ Route::get('/admin',[AdminController::class,'shows']);
 Route::post('/admin/dashboard',[AdminController::class,'signin']);
 Route::get('/admin/dashboard',[AdminController::class,'show']);
 Route::get('/admin/table',[AdminController::class,'showtb']);
-Route::post('/admin/form',[BlogController::class,'editor']);
-Route::get('/admin/form',[AdminController::class,'showf']);
+Route::post('/admin/form',[BlogController::class,'create']);
+Route::get('/admin/form',[BlogController::class,'showf']);
 
 
 
