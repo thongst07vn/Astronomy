@@ -1,43 +1,38 @@
-@extends('layout')
-@section('content')
-<x-menu menu="blog"/>
-<main id='blog-page'>
-    @vite(['resources/css/blog.css'])
-    <section class="blog-banner"></section>
-    <section class="blog-content">
-        <div class='blog-side'>
-          @foreach($blog as $i)
-            @if($i->id%2 != 0)
-            <div class='blog1'>
-              <div>
-                <img src="image/bigbang.jpg" alt="">
-              </div>
-              <div>
-                {{$i->headtitle}}
-                {{Str::limit($i->content, 297)}}
-                <input type="button" value="Read more" class="read-more">
-              </div>
-            </div>
-            @endif
-            @if($i->id%2==0)
-            <div class='blog2'>
-              <div>
-                <h1>{{$i->headtitle, 20}}</h1>
-                {{!!html_entity_decode(Str::limit($i->content, 297))!!}}
-                <input type="button" value="Read more" class="read-more">
-              </div>
-              <div>
-                <img src="image/evo.png" alt="">
-              </div>
-            </div>
-            @endif
-          @endforeach
-        </div>
+<?php
 
+namespace App\Http\Controllers;
+use Session;
+use Illuminate\View\View;
+use Illuminate\Support\Str;
+use App\Mail\ForgotPassword;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\HASH;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
-          
-        <div class='side-bar-1'></div>
-    </section>
-    <section class="blog-banner"></section>
-</main>
-@endsection
+class BlogController extends Controller
+{
+
+    public function showf(): View{
+        return view('admin.layouts.form');
+    }
+    public function editor(Request $REQUEST){
+        $edit = $REQUEST -> floatingTextarea;
+        $contentsql = htmlentities($edit);
+            if(Str::contains($edit,'</h1>') == true){
+                $headtitle=strip_tags((strstr($edit,'</h1>', true)."</h1>"), 'h1');
+            }else{
+                $headtitle='<h1>This Is Title</h1>';
+            }
+        // DB::insert("insert into blogsum(headtitle, content) values (?,?)",[$headtitle,substr(strstr($contentsql,htmlentities('</h1>')),11)]);
+        // return redirect()->back();
+    }
+    public function detail(string $id): View{
+        $blog = DB::Select('select * from blogsum');
+        $menu ='blog';
+        return view('layouts.blogdetail',['menu' => $menu, 'blog'=>$blog, 'id' =>$id]);
+    }
+}
