@@ -75,7 +75,7 @@ class LoginController extends BaseController
     }
     public function signout(Request $REQUEST){
         $r = $REQUEST->session()->flush();
-        return redirect('login');
+        return redirect('/');
     }
     public function forgotmail(Request $REQUEST):View{
         $email = $REQUEST->email;

@@ -83,7 +83,7 @@ form {
 }
 
 input{
-	background: none;
+	background: transparent;
 	outline: none;
 	border: none;
 	padding: 12px 15px;
@@ -95,10 +95,7 @@ input{
 	width: 500px;
 }
 .container {
-	background: url(../../public/image/login.jpg);
-	background-position: bottom right;
-	background-repeat: no-repeat;
-	background-size: 1280px 720px;
+	backdrop-filter: blur(15px);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -123,7 +120,7 @@ ul{
 	text-align-last: center;
 }
 #one,#two,#three,#four{
-	backdrop-filter: blur(15px);
+	
 	margin: 0 10px;
 	height: 80px;
 	width: 80px;

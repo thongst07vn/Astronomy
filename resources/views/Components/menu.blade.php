@@ -1,6 +1,6 @@
 
 <header class ="menubackground">
-  <section>
+    <section>
         <a href="/"><img src="image/logo-long.png" alt="#"></a>
     </section>
     <section>
@@ -14,12 +14,9 @@
             </ul>
         </nav>
     </section>
-    <nav>
-    <a href="/login">           
-    <div>
-        <i class="fa-solid fa-user-astronaut"></i>
-        <p>Login</p>
-    </div>
-    </a>
-</nav>
+    @if (session()->has('username1'))
+        @include('Components.signout')
+        @else
+            @include('Components.signin')
+    @endif
 </header>

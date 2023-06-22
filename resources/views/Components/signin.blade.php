@@ -1,7 +1,7 @@
 <nav>
     <a href="/login">           
     <div>
-        <span><i class="fa-solid fa-user"></i></span>
+        <i class="fa-solid fa-user-astronaut"></i>
         <p>Login</p>
     </div>
     </a>

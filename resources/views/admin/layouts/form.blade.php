@@ -16,6 +16,7 @@
                             CKEDITOR.replace('floatingTextarea');
                         </script>
                         <br>
+                        <input type="file" name="imgtitle" id="imgtitle">
                         <button type="submit">Create</button>
                     </form>
                 </div>

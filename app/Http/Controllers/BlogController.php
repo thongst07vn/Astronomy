@@ -22,13 +22,19 @@ class BlogController extends Controller
     public function editor(Request $REQUEST){
         $edit = $REQUEST -> floatingTextarea;
         $contentsql = htmlentities($edit);
-            if(Str::contains($edit,'</h1>') == true){
-                $headtitle=strip_tags((strstr($edit,'</h1>', true)."</h1>"), 'h1');
-            }else{
-                $headtitle='<h1>This Is Title</h1>';
-            }
-        // DB::insert("insert into blogsum(headtitle, content) values (?,?)",[$headtitle,substr(strstr($contentsql,htmlentities('</h1>')),11)]);
-        // return redirect()->back();
+        if(Str::contains($edit,'</h1>') == true){
+            $headtitle=strip_tags((strstr($edit,'</h1>', true)."</h1>"), 'h1');
+        }else{
+            $headtitle='<h1>This Is Title</h1>';
+        }
+        // $file = $request->file('avatar');
+        // $fileName = $file->getClientOriginalName();
+        // $file -> storeAs('avatar1',$fileName);
+        // $file -> move(public_path('avatar1'), $fileName); 
+        // $username = $request-> session () -> get ('username1');
+        // $avtpath = "avatar1/" . $fileName;
+        DB::insert("insert into blogsum(headtitle, content) values (?,?)",[$headtitle,substr(strstr($contentsql,htmlentities('</h1>')),11)]);
+        return redirect()->back();
     }
     public function detail(string $id): View{
         $blog = DB::Select('select * from blogsum');

@@ -28,7 +28,7 @@
 		</div>
 		<div class="form-container sign-in-container" id="Sign-In">
 			<h1 class="titleSI">Sign in</h1>
-			<form action="/index" id="signin" method="post">
+			<form action="/home" id="signin" method="post">
 				<input type="text" placeholder="Email" name='usernamesignin' autocomplete="off"/>
 				<input type="password" placeholder="Password" name='passwordssignin' autocomplete="off"/>
 				<span ><i class="fa-solid fa-eye-slash"></i></span>

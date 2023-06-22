@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <title>DarkPan - Bootstrap 5 Admin Template</title>
     <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="icon" href="{{asset('image/logo.jpg')}}">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">

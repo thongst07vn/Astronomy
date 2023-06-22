@@ -23,6 +23,7 @@ Route::get('/login/forgotpasswword',[LoginController::class,'forgot']);
 Route::get('/login/forgotpasswword/otp',[LoginController::class,'forgotmail']);
 Route::get('/login/forgotpasswword/resetpassword',[LoginController::class,'checkotp']);
 Route::post('/login/forgotpasswword/resetpassword',[LoginController::class,'reset']);
+Route::get('/welcome',[LoginController::class,'signout']);
 
 Route::get('/admin',[AdminController::class,'shows']);
 Route::post('/admin/dashboard',[AdminController::class,'signin']);
@@ -30,7 +31,6 @@ Route::get('/admin/dashboard',[AdminController::class,'show']);
 Route::get('/admin/table',[AdminController::class,'showtb']);
 Route::post('/admin/form',[BlogController::class,'editor']);
 Route::get('/admin/form',[BlogController::class,'showf']);
-
 
 
 
