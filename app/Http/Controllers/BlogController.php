@@ -27,14 +27,18 @@ class BlogController extends Controller
         }else{
             $headtitle='<h1>This Is Title</h1>';
         }
-        // $file = $request->file('avatar');
-        // $fileName = $file->getClientOriginalName();
-        // $file -> storeAs('avatar1',$fileName);
-        // $file -> move(public_path('avatar1'), $fileName); 
-        // $username = $request-> session () -> get ('username1');
-        // $avtpath = "avatar1/" . $fileName;
-        DB::insert("insert into blogsum(headtitle, content) values (?,?)",[$headtitle,substr(strstr($contentsql,htmlentities('</h1>')),11)]);
-        return redirect()->back();
+        $file = $REQUEST->file('imgtitle');
+        
+        if($file == ""){
+            $imgtitle = "storage/imgtitle/noimg.jpg";
+        } else {
+            $fileName = $file->getClientOriginalName();
+            $file -> storeAs('public/imgtitle',$fileName);
+            $imgtitle = "asset('storage/imgtitle/" . $fileName . "')";
+
+        }
+        // DB::insert("insert into blogsum(headtitle, content, imgtitle) values (?,?,?)",[$headtitle,substr(strstr($contentsql,htmlentities('</h1>')),11),$imgtitle]);
+        return back()->with('imgtitle',$imgtitle);
     }
     public function detail(string $id): View{
         $blog = DB::Select('select * from blogsum');

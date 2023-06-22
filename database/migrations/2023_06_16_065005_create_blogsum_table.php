@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('headtitle');
             $table->longText('content');
+            $table->
             $table->timestamps();
         });
     }
