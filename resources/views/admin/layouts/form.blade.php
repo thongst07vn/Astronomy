@@ -17,8 +17,8 @@
                         </script>
                         <br/>
                         <p>Choose artical picture here:</p>
-                        <img style ="width: 533px; height: 325px; object-fit: cover;" src="{{ Session::get('imgtitle') }}" alt="#">
-                        <img style ="width: 533px; height: 325px; object-fit: cover;" src="{{ asset('storage/public/noimg.jpg') }}" alt="#">
+                        <img style ="width: 533px; height: 325px; object-fit: cover;" src="{{ asset(Session::get('imgtitle')) }}" alt="#">
+                        <img style ="width: 533px; height: 325px; object-fit: cover;" src="{{ asset('storage/imgtitle/noimg.jpg') }}" alt="#">
                         <hr/>
                         <input type="file" name="imgtitle" id="imgtitle">
                         <hr/>

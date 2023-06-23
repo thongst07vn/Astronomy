@@ -1,0 +1,203 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: none repeat scroll 0 0 white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.5;
+    color: black;
+    
+}
+
+/* SLIDE MAIN */
+/* Slideshow container */
+
+  
+.slideshow-container {
+    max-width: 78%;
+    position: relative;
+    margin: auto;
+    /* height: 300px; */
+  }
+.my-pic{
+    height: 300px;
+}
+  /* Caption text */
+  
+  
+  /* Number text (1/3 etc) */
+  .number-text {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active {
+    background-color: white;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+}
+/* main-star */
+.container-fluid {
+    max-width: 100%;
+   
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+.container-star {
+    max-width: 1500px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}  
+
+
+.content-star {
+   
+    margin: 0px auto;
+}
+
+.nav-tabs {
+    display: flex;
+    list-style: none;
+    margin: 30px;
+    padding: 0;
+    /* border-bottom: 3px solid #dddd; */
+    
+    
+}
+.nav-tabs li {
+    margin-right: 10px;
+ 
+}
+.nav-tabs li a{
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    padding: 6px 10px;
+    text-transform: uppercase;
+    border: 1px solid #bebebe;
+    color: #555;
+    left: 470px;
+    top: 5px;
+   
+}
+.nav-tabs li a::after{
+    content: "";
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: -3px;
+    background-color: transparent;
+    
+}
+.nav-tabs li.active a::after, .nav-tabs li:hover a::after{
+    background-color: red;
+}
+ul.month-stars{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+ul.month-stars li{
+    flex-basis: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+
+}
+ul.month-stars li img {
+    max-width: 100%;
+    height: auto;
+}
+ul.month-stars li .star-top {
+    position: relative;
+    overflow: hidden;
+}
+
+
+ul.month-stars li .star-top .star-img {
+    display: block;
+    /* border-radius: 50%; */
+}
+
+ul.month-stars li .star-top .star-img img{
+    display: block;
+    
+}
+ul.month-stars li:hover .star-top .star-img img {
+    filter: opacity(80%);
+    
+}
+ul.month-stars li .star-top a.choose-now{
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color:#fff;
+    display: block;
+    background-color: #446084;
+    padding: 10px 0x;
+    position: absolute;
+    bottom: -36px;
+    width: 100%;
+    transition: 0.25s ease-in-out;
+    opacity: 0.85;
+
+}
+/* Hieu ung */
+ul.month-stars li:hover a.choose-now{
+    bottom: 0px;
+}
+ul.month-stars li .star-info {
+    padding: 10px 0;
+}
+ul.month-stars li .star-info a {
+    display: block;
+    text-decoration: none;
+}
+ul.month-stars li .star-info a.product-name{
+    font-size: 12px;
+    text-transform: uppercase;
+    color: red;
+    padding: 3px 0px;
+    text-align: center;
+}
+ul.month-stars li .star-info a.product-detail{
+    color: #334862;
+    padding: 3px 0px;
+    text-align: center;
+}

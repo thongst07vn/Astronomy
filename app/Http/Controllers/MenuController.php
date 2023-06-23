@@ -26,8 +26,12 @@ class MenuController extends BaseController
     public function blog(Request $REQUEST): View{
         $blog = DB::Select('select * from blogsum');
         $menu ='blog';
-        return view('layouts.blog',['menu' => $menu, 'blog'=>$blog]);
+        return view('layouts.blog',['menu' => $menu,'blog'=>$blog]);
     }
-
-
+    public function constellar(Request $REQUEST): View{
+        $zodiac = DB::select('select * from zodiac');
+        $constellation = DB::select('select * from constellar');
+        $menu ='constellation';
+        return view('layouts.constellar',['menu' => $menu,'zodiac' => $zodiac,'constellation' => $constellation]);
+    }
 }

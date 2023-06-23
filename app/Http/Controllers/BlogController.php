@@ -15,7 +15,6 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class BlogController extends Controller
 {
-
     public function showf(): View{
         return view('admin.layouts.form');
     }
@@ -27,17 +26,18 @@ class BlogController extends Controller
         }else{
             $headtitle='<h1>This Is Title</h1>';
         }
+
         $file = $REQUEST->file('imgtitle');
         
         if($file == ""){
-            $imgtitle = "storage/imgtitle/noimg.jpg";
+            $this -> imgtitle = "storage/imgtitle/noimg.jpg";
         } else {
             $fileName = $file->getClientOriginalName();
             $file -> storeAs('public/imgtitle',$fileName);
-            $imgtitle = "asset('storage/imgtitle/" . $fileName . "')";
-
+            $imgtitle = "storage/imgtitle/" . $fileName;
         }
-        // DB::insert("insert into blogsum(headtitle, content, imgtitle) values (?,?,?)",[$headtitle,substr(strstr($contentsql,htmlentities('</h1>')),11),$imgtitle]);
+        return back()->with('imgtitle',$imgtitle);
+        DB::insert("insert into blogsum(headtitle, content, imgtitle) values (?,?,?)",[$headtitle,substr(strstr($contentsql,htmlentities('</h1>')),11),$imgtitle]);
         return back()->with('imgtitle',$imgtitle);
     }
     public function detail(string $id): View{

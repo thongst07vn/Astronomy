@@ -37,6 +37,7 @@ Route::get('/admin/form',[BlogController::class,'showf']);
 Route::post('/home',[LoginController::class,'signin']);
 Route::get('/',[MenuController::class,'index']);
 Route::get('/home',[MenuController::class,'index']);
+Route::get('/constellation',[MenuController::class,'constellar']);
 Route::get('/about',[MenuController::class,'about']);
 Route::get('/blog',[MenuController::class,'blog']);
 Route::get('/blog/{id?}',[BlogController::class,'detail']);
