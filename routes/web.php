@@ -41,8 +41,6 @@ Route::post('/',[MenuController::class,'avatar']);
 Route::get('/home',[MenuController::class,'index']);
 Route::get('/about',[MenuController::class,'about']);
 Route::get('/blog',[MenuController::class,'blog']);
-<<<<<<< HEAD
 Route::get('/blog/{id}',[BlogController::class,'post']);
-=======
-Route::get('/blog/{id?}',[BlogController::class,'detail']);
->>>>>>> 3ba2652f966f1b6dac9486bcedbd03b2f3f1a4ea
+
+

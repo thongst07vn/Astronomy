@@ -10,11 +10,7 @@
             @if($i->id%2 != 0)
             <div class='blog1'>
               <div>
-<<<<<<< HEAD
                 <img src="{{$i -> imgtitle}}" alt="">
-=======
-                <img src="{{asset($i->imgtitle)}}" alt="#">
->>>>>>> 3ba2652f966f1b6dac9486bcedbd03b2f3f1a4ea
               </div>
               <div>
                 <h1>{!!html_entity_decode($i->headtitle)!!}</h1>
@@ -31,19 +27,12 @@
                 <a class="read-more" href="blog/{{$i->id}}">Read More</a>
               </div>
               <div>
-<<<<<<< HEAD
                 <img class="read-more" src="{{$i -> imgtitle}}" alt="">
-=======
-                <img src="{{asset($i->imgtitle)}}" alt="#">
->>>>>>> 3ba2652f966f1b6dac9486bcedbd03b2f3f1a4ea
               </div>
             </div>
             @endif
           @endforeach
         </div>
-
-
-
         <div class='side-bar-1'></div>
     </section>
     <section class="blog-banner"></section>

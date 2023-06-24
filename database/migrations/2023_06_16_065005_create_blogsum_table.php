@@ -15,11 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('headtitle');
             $table->longText('content');
-<<<<<<< HEAD
             $table->longText('imgtitle');
-=======
-            $table->string('imgtitle');
->>>>>>> 3ba2652f966f1b6dac9486bcedbd03b2f3f1a4ea
             $table->timestamps();
         });
     }
