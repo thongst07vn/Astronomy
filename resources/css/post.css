@@ -1,5 +1,5 @@
 #post-page{
-    height:100vh;
+    height:auto;
     background-color: #FFFFFF;
     background-image: url(../../public/image/stary.jpg);
     display: flex;
@@ -24,6 +24,7 @@
     display: flex;
     flex-direction: column;
     width:80%;
+    max-width: 80%;
     height: 100%;
 }
 .side-bar-1{
@@ -37,7 +38,12 @@
     height: 650px;
 }
 .post-side h1{
+    font-size: 30px;
     text-align: center;
+}
+.post-side p{
+    font-size: 20px;
+    line-height: 1.5;
 }
 .post-side p,
 .post-side h1,

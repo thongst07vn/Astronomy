@@ -10,12 +10,13 @@
             @if($i->id%2 != 0)
             <div class='blog1'>
               <div>
-                <img src="{{$i -> imgtitle}}" alt="">
+                <img src="{{asset($i -> imgtitle)}}" alt="">
               </div>
               <div>
                 <h1>{!!html_entity_decode($i->headtitle)!!}</h1>
                 {!!html_entity_decode(Str::limit($i->content, 297))!!}
-                <a class="read-more" href="blog/{{$i->id}}">Read More</a>
+
+                <p><a class="read-more" href="blog/{{$i->id}}">Read More</a></p>
               </div>
             </div>
             @endif
@@ -24,15 +25,17 @@
               <div>
                 <h1>{!!html_entity_decode($i->headtitle)!!}</h1>
                 {!!html_entity_decode(Str::limit($i->content, 297))!!}
-                <a class="read-more" href="blog/{{$i->id}}">Read More</a>
+                <p><a class="read-more" href="blog/{{$i->id}}">Read More</a></p>
               </div>
               <div>
-                <img class="read-more" src="{{$i -> imgtitle}}" alt="">
+                <img src="{{asset($i -> imgtitle)}}" alt="">
               </div>
             </div>
             @endif
           @endforeach
+          {{ $blog->render('list') }}
         </div>
+        
         <div class='side-bar-1'></div>
     </section>
     <section class="blog-banner"></section>

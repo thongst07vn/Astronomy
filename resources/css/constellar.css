@@ -152,6 +152,9 @@ ul.month-stars li .star-top {
 
 ul.month-stars li .star-top .star-img {
     display: block;
+    width: 345px;
+    height: 345px;
+    object-fit: cover;
     /* border-radius: 50%; */
 }
 
@@ -190,7 +193,7 @@ ul.month-stars li .star-info a {
     text-decoration: none;
 }
 ul.month-stars li .star-info a.product-name{
-    font-size: 12px;
+    font-size: 25px;
     text-transform: uppercase;
     color: red;
     padding: 3px 0px;

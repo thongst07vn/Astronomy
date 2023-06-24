@@ -20,7 +20,8 @@ export default defineConfig({
                     'resources/css/blog.css',
                     'resources/css/post.css',
                     'resources/css/constellar.css',
-                    'resources/js/constellar.js'
+                    'resources/js/constellar.js',
+                    'resources/js/bootstrap.js'
 
                 ],
             refresh: true,

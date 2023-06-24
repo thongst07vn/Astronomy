@@ -18,3 +18,20 @@ function showSlides() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
+
+$(document).ready(function(){
+  //An content
+$('.tab-content-item').hide();
+$('.tab-content-item:first-child').fadeIn();
+$('.nav-tabs li').click(function(){
+  //Active nav-tabs
+  $('.nav-tabs li').removeClass('active');
+  $(this).addClass('active');
+
+  //Show tab-content star
+  let id_tab_content = $(this).children('a').attr('href');
+  $('.tab-content-item').hide();
+  $(id_tab_content).fadeIn();
+  return false;
+});
+});

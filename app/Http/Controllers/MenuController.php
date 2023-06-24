@@ -22,9 +22,15 @@ class MenuController extends Controller
         return view('layouts.index',['menu' => $menu]);
     }
     public function blog(Request $REQUEST): View{
-        $blog = DB::Select('select * from blogsum');
+        $blog = DB::Table('blogsum') -> Paginate(3);
         $menu ='blog';
         return view('layouts.blog',['menu' => $menu, 'blog'=>$blog]);
+    }
+    public function constellation(Request $REQUEST): View{
+        $menu ='contellation';
+        $constellar = DB::Select('select * from constellar');
+        $zodiac = DB::Select('select * from zodiac');
+        return view('layouts.constellar',['menu' => $menu,'constellar' => $constellar,'zodiac' => $zodiac ]);
     }
     public function avatar(Request $request){
         $file = $request->file('avatar');

@@ -47,6 +47,6 @@ class BlogController extends Controller
         $post = DB::Select('select * from blogsum where id = ?',[$id]);
         // dd($post);
         $menu ='blog';
-        return view('layouts.post',['menu' => $menu, 'post'=>$post[0], 'id' =>$id]);
+        return view('layouts.post',['menu' => $menu, 'post'=>$post]);
     }
 }

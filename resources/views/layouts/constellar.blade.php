@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
 <x-menu menu="constellation"/>
-@vite(['resources/css/constellar.css','resources/js/constellar.js'])
+@vite(['resources/css/constellar.css','resources/js/bootstrap.js','resources/js/constellar.js'])
 <main>
     <div class="container-fluid">
 
@@ -54,7 +54,7 @@
                                 <div class="star-item">
                                     <div class="star-top">
                                         <a href="">
-                                            <img src="{{$i -> linkspic}}"  class="star-img">
+                                            <img src="{{asset($i -> linkspic)}}"  class="star-img">
                                         </a>
                                         <a href="" class="choose-now">Choose now</a>
                                     </div>
@@ -74,12 +74,12 @@
             
                     <div id="content_2" class="tab-content-item">
                         <ul class="month-stars">
-                            @foreach ($constellation as $i)
+                            @foreach ($constellar as $i)
                             <li>
                                 <div class="star-item">
                                     <div class="star-top">
                                         <a>
-                                            <img src="img/cassiopeia.jpg"  class="star-img">
+                                            <img src="{{asset($i -> linkspic)}}"  class="star-img">
                                         </a>
                                         <a href="" class="choose-now">Choose now</a>
                                     </div>
@@ -99,21 +99,6 @@
     </div>
 </main>
         <script>
-            $(document).ready(function(){
-                //An content
-             $('.tab-content-item').hide();
-             $('.tab-content-item:first-child').fadeIn();
-             $('.nav-tabs li').click(function(){
-                //Active nav-tabs
-                $('.nav-tabs li').removeClass('active');
-                $(this).addClass('active');
-
-                //Show tab-content star
-                let id_tab_content = $(this).children('a').attr('href');
-                $('.tab-content-item').hide();
-                $(id_tab_content).fadeIn();
-                return false;
-             });
-            });
+            
         </script>
 @endsection

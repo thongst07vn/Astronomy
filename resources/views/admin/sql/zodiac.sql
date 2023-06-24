@@ -12,7 +12,7 @@ CREATE TABLE `zodiac`
 
 INSERT INTO `zodiac` (`id`, `name`, `unicode_character`, `gloss`, `period`, `zodiac_element`, `linkspic`) VALUES ('1', 'Aries', 'constellar/zodiac/Aries_symbol.svg.png', 'Ram', 'March 20 – April 20', 'fire', 'constellar/zodiac/aries.jpg');
 INSERT INTO `zodiac` (`id`, `name`, `unicode_character`, `gloss`, `period`, `zodiac_element`, `linkspic`) VALUES ('2', 'Taurus', 'constellar/zodiac/Taurus_symbol.svg.png', 'Bull', 'April 20 – May 21', 'Earth', 'constellar/zodiac/taurus.jpg');
-INSERT INTO `zodiac` (`id`, `name`, `unicode_character`, `gloss`, `period`, `zodiac_element`, `linkspic`) VALUES ('3', 'Gemini', 'constellar/zodiac/Geminiu_symbol.svg.png', 'Twins', 'May 21 – June 21', 'Air ', 'constellar/zodiac/geminiu.jpg');
+INSERT INTO `zodiac` (`id`, `name`, `unicode_character`, `gloss`, `period`, `zodiac_element`, `linkspic`) VALUES ('3', 'Gemini', 'constellar/zodiac/Geminiu_symbol.svg.png', 'Twins', 'May 21 – June 21', 'Air ', 'constellar/zodiac/gemini.jpg');
 INSERT INTO `zodiac` (`id`, `name`, `unicode_character`, `gloss`, `period`, `zodiac_element`, `linkspic`) VALUES ('4', 'Cancer', 'constellar/zodiac/Cancer_symbol.svg.png', 'Crab', 'June 21 – July 23', 'Water', 'constellar/zodiac/cancer.jpg');
 INSERT INTO `zodiac` (`id`, `name`, `unicode_character`, `gloss`, `period`, `zodiac_element`, `linkspic`) VALUES ('5', 'Leo', 'constellar/zodiac/Leo_symbol.svg.png', 'Lion', 'July 23 – August 23', 'fire', 'constellar/zodiac/leo.jpg');
 INSERT INTO `zodiac` (`id`, `name`, `unicode_character`, `gloss`, `period`, `zodiac_element`, `linkspic`) VALUES ('6', 'Virgo', 'constellar/zodiac/Virgo._symbol.svg.png', 'Maiden', 'August 23 – September', 'Earth', 'constellar/zodiac/virgo.jpg');
