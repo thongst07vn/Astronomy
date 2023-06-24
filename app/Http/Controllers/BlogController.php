@@ -36,13 +36,13 @@ class BlogController extends Controller
             $file -> storeAs('public/imgtitle',$fileName);
             $imgtitle = "storage/imgtitle/" . $fileName;
         }
-        return back()->with('imgtitle',$imgtitle);
         DB::insert("insert into blogsum(headtitle, content, imgtitle) values (?,?,?)",[$headtitle,substr(strstr($contentsql,htmlentities('</h1>')),11),$imgtitle]);
         return back()->with('imgtitle',$imgtitle);
     }
-    public function detail(string $id): View{
-        $blog = DB::Select('select * from blogsum');
+    public function post(int $id): View{
+        $post = DB::Select('select * from blogsum where id = ?',[$id]);
+        // dd($post);
         $menu ='blog';
-        return view('layouts.blogdetail',['menu' => $menu, 'blog'=>$blog, 'id' =>$id]);
+        return view('layouts.post',['menu' => $menu, 'post'=>$post[0], 'id' =>$id]);
     }
 }

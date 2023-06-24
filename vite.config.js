@@ -16,6 +16,7 @@ export default defineConfig({
                     'resources/css/main.css',
                     'resources/js/app.js',
                     'resources/css/blog.css',
+                    'resources/css/post.css',
                     'resources/css/constellar.css',
                     'resources/js/constellar.js'
                 ],

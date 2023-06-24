@@ -10,24 +10,24 @@
             @if($i->id%2 != 0)
             <div class='blog1'>
               <div>
-                <img src="image/bigbang.jpg" alt="">
+                <img src="{{$i -> imgtitle}}" alt="">
               </div>
               <div>
-                <h1>{!!html_entity_decode(Str::limit($i->headtitle, 100))!!}</h1>
+                <h1>{!!html_entity_decode($i->headtitle)!!}</h1>
                 {!!html_entity_decode(Str::limit($i->content, 297))!!}
-                <a href="blog/{{$i->id}}">Read More</a>
+                <a class="read-more" href="blog/{{$i->id}}">Read More</a>
               </div>
             </div>
             @endif
             @if($i->id%2==0)
             <div class='blog2'>
               <div>
-                <h1>{!!html_entity_decode(Str::limit($i->headtitle, 100))!!}</h1>
+                <h1>{!!html_entity_decode($i->headtitle)!!}</h1>
                 {!!html_entity_decode(Str::limit($i->content, 297))!!}
-                <input type="button" value="Read more" class="read-more">
+                <a class="read-more" href="blog/{{$i->id}}">Read More</a>
               </div>
               <div>
-                <img src="image/evo.png" alt="">
+                <img class="read-more" src="{{$i -> imgtitle}}" alt="">
               </div>
             </div>
             @endif
