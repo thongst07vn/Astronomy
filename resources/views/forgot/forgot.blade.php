@@ -2,7 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Astranomy</title>
+	<title>Astronomy</title>
+    <link rel="icon" href="{{asset('image/logo.jpg')}}">
     @vite(['resources/css/forgot.css','resources/js/forgot.js'])
 </head>
 <body>

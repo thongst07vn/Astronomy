@@ -2,9 +2,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>KONECTIVE FURNITURE</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" defer></script>
-	<link rel="icon" href="image/logo.jpg">
+    <title>Astronomy</title>
+    <link rel="icon" href="{{asset('image/logo.jpg')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 	@vite(['resources/css/login.css','resources/js/login.js'])
 </head>
 <body>
@@ -12,12 +12,13 @@
 		<div class="form-container sign-up-container" id="Sign-Up">
 			<h1 class="titleSU">Create Account</h1>
 			<form action="/login" id="signup" method='post'>
-				<input type="text" placeholder="Email" name='username' autocomplete="off"/>
+				<input type="text" placeholder="Gmail" name='username' autocomplete="off"/>
 				<input type="password" placeholder="Password" name='passwords' autocomplete="off"/>
 				<span><i class="fa-solid fa-eye-slash"></i></span>
 				<input type="password" placeholder="Re-Password" name='repasswords' autocomplete="off"/>
 				<span><i class="fa-solid fa-eye-slash"></i></span>
 				<ul class="checklist hiden">
+					<li><i class="fa-solid fa-x"></i> Gmail is invalidate</li>
 					<li><i class="fa-solid fa-x"></i> Uppercase Letter</li>
 					<li><i class="fa-solid fa-x"></i> Numbers</li>
 					<li><i class="fa-solid fa-x"></i> 8 - 20 Characters</li>
@@ -29,7 +30,7 @@
 		<div class="form-container sign-in-container" id="Sign-In">
 			<h1 class="titleSI">Sign in</h1>
 			<form action="/home" id="signin" method="post">
-				<input type="text" placeholder="Email" name='usernamesignin' autocomplete="off"/>
+				<input type="text" placeholder="Gmail" name='usernamesignin' autocomplete="off"/>
 				<input type="password" placeholder="Password" name='passwordssignin' autocomplete="off"/>
 				<span ><i class="fa-solid fa-eye-slash"></i></span>
 				<input type="checkbox" name="checkbox" id="checkbox" value="lsRememberMe">

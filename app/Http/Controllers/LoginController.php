@@ -32,21 +32,26 @@ class LoginController extends BaseController
             $tb = "Email Has Already Taken";
             return redirect('login')->with('tb',$tb);
         }else{
-            if(!preg_match("/^(?=.{8,20})(?=.*[A-Z])(?=.*[0-9])/i",$passwords)){
+            if(!preg_match("/^([a-z0-9A-Z]+(@gmail)+(\.com))/i",$username)){
                 return redirect('login');
             }else{
-                if($passwords == $repasswords){
-                    DB::table('Loginuser')->insert([
-                        'username' => $username,
-                        'passwords' => HASH::make($passwords),
-                        'avatar' => 'IMAGE/avt.jpg'
-                    ]);
-                    $tb = "User Create Sussecful";
-                    return redirect('login')->with('tb',$tb);
-                }else{
+                if(!preg_match("/^(?=.{8,20})(?=.*[A-Z])(?=.*[0-9])/i",$passwords)){
                     return redirect('login');
+                }else{
+                    if($passwords == $repasswords){
+                        DB::table('Loginuser')->insert([
+                            'username' => $username,
+                            'passwords' => HASH::make($passwords),
+                            'avatar' => 'image/avt.jpg'
+                        ]);
+                        $tb = "User Create Sussecful";
+                        return redirect('login')->with('tb',$tb);
+                    }else{
+                        return redirect('login');
+                    }
                 }
             }
+            
         }
         
     }
@@ -60,7 +65,7 @@ class LoginController extends BaseController
             
             foreach($mangpassword as $check){
                 if(Hash::check($passwordssigin,$check->passwords)){
-                    $r=$REQUEST->session()->put('username1',$usernamesignin);
+                    $r=session(['username1'=>$usernamesignin]);
                     return redirect('home');
 
                 }else{

@@ -3,8 +3,9 @@
 namespace App\View\Components;
 
 use Closure;
-use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Contracts\View\View;
 
 class Menu extends Component
 {
@@ -21,7 +22,13 @@ class Menu extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.menu');
+        $username = session ('username1');
+        $avt = "";
+        $avatar = DB::select("select avatar from Loginuser where username =?",[$username]);
+        foreach($avatar as $check){
+            $avt = $check -> avatar;
+        }
+        return view('components.menu',['avt'=>$avt]);
     }
 
 }

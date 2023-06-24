@@ -14,7 +14,7 @@
             <a   @class(['nav-item','nav-link', 'active' => $menu == 'dashboard']) href="/admin/dashboard"  ><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
             <a  @class(['nav-item', 'nav-link','active' => $menu == 'table']) href="/admin/table"  ><i class="fa fa-keyboard me-2"></i>Tables</a>
             <a  @class(['nav-item', 'nav-link','active' => $menu == 'form']) href="/admin/form"><i class="fa fa-table me-2"></i>Forms</a>
-            <a class = 'nav-item nav-link' href="/"><i class="fa fa-arrow-right-from-bracket"></i>Sign Out</a>
+            <a class = 'nav-item nav-link' href="/test"><i class="fa fa-arrow-right-from-bracket"></i>Sign Out</a>
         </div>
         
     </nav>
