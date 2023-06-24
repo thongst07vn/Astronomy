@@ -26,6 +26,7 @@ Route::post('/login/forgotpasswword/resetpassword',[LoginController::class,'rese
 Route::get('/welcome',[LoginController::class,'signout']);
 
 Route::get('/admin',[AdminController::class,'shows']);
+Route::get('/test',[AdminController::class,'signout']);
 Route::post('/admin/dashboard',[AdminController::class,'signin']);
 Route::get('/admin/dashboard',[AdminController::class,'show']);
 Route::get('/admin/table',[AdminController::class,'showtb']);
@@ -36,8 +37,8 @@ Route::get('/admin/form',[BlogController::class,'showf']);
 
 Route::post('/home',[LoginController::class,'signin']);
 Route::get('/',[MenuController::class,'index']);
+Route::post('/',[MenuController::class,'avatar']);
 Route::get('/home',[MenuController::class,'index']);
-Route::get('/constellation',[MenuController::class,'constellar']);
 Route::get('/about',[MenuController::class,'about']);
 Route::get('/blog',[MenuController::class,'blog']);
 Route::get('/blog/{id?}',[BlogController::class,'detail']);

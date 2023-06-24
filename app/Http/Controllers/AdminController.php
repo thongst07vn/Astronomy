@@ -9,21 +9,30 @@ use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\HASH;
-class AdminController extends BaseController
+class AdminController extends Controller
 {
     use AuthorizesRequests, ValidatesRequests;
-    public function show(): View{
+    public function show(){
+        if(!$this->checkadmin()){
+            $tb = 'Please Login To Use This Fearture';
+            return redirect('admin')->with('tb',$tb);
+        }
         return view('admin.layouts.dashboard');
+        
     }
-    public function showtb(): View{
+    public function showtb(){
+        if(!$this->checkadmin()){
+            $tb = 'Please Login To Use This Fearture';
+            return redirect('admin')->with('tb',$tb);
+        }
         return view('admin.layouts.table');
     }
-    
-    public function shows(): View{
+    public function shows(){
         return view('admin.loginadmin');
     }
     public function signin(Request $REQUEST){
         $admin = $REQUEST -> admin;
+        $r=session(['admin'=>$admin]);
         $passwords = $REQUEST -> passwords;
         $manguser = DB::select("select admin from Loginadmin where admin=?",[$admin]);
         $mangpassword = DB::select("select passwords from Loginadmin where admin=?",[$admin]);
@@ -44,8 +53,9 @@ class AdminController extends BaseController
         }
     }
     public function signout(Request $REQUEST){
-        $r = $REQUEST->session()->flush();
-        return redirect('login');
+        $r = session(['admin'=>null]);
+        return redirect('/');
     }
+    
 }
     

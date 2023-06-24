@@ -10,7 +10,7 @@
             @if($i->id%2 != 0)
             <div class='blog1'>
               <div>
-                <img src="image/bigbang.jpg" alt="">
+                <img src="{{asset($i->imgtitle)}}" alt="#">
               </div>
               <div>
                 <h1>{!!html_entity_decode(Str::limit($i->headtitle, 100))!!}</h1>
@@ -27,7 +27,7 @@
                 <input type="button" value="Read more" class="read-more">
               </div>
               <div>
-                <img src="image/evo.png" alt="">
+                <img src="{{asset($i->imgtitle)}}" alt="#">
               </div>
             </div>
             @endif

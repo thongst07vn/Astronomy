@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-@vite(['resources/css/app.css','resources/css/main.css'])
+@vite([ 'resources/css/main.css'])
 <x-menu menu="index"/>
 <nav id="browser-compatibility-modal" class="reveal browser-compatibility-modal">
     <h3>Browser Compatibility</h3>

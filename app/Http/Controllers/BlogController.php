@@ -15,7 +15,12 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class BlogController extends Controller
 {
-    public function showf(): View{
+    
+    public function showf(){
+        if(!$this->checkadmin()){
+            $tb = 'Please Login To Use This Fearture';
+            return redirect('admin')->with('tb',$tb);
+        }
         return view('admin.layouts.form');
     }
     public function editor(Request $REQUEST){
@@ -26,17 +31,15 @@ class BlogController extends Controller
         }else{
             $headtitle='<h1>This Is Title</h1>';
         }
-
         $file = $REQUEST->file('imgtitle');
-        
+        $imgtitle = "storage/imgtitle/noimg.jpg";
         if($file == ""){
-            $this -> imgtitle = "storage/imgtitle/noimg.jpg";
+            $imgtitle = "storage/imgtitle/noimg.jpg";
         } else {
             $fileName = $file->getClientOriginalName();
             $file -> storeAs('public/imgtitle',$fileName);
             $imgtitle = "storage/imgtitle/" . $fileName;
         }
-        return back()->with('imgtitle',$imgtitle);
         DB::insert("insert into blogsum(headtitle, content, imgtitle) values (?,?,?)",[$headtitle,substr(strstr($contentsql,htmlentities('</h1>')),11),$imgtitle]);
         return back()->with('imgtitle',$imgtitle);
     }

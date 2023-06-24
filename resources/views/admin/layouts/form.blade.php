@@ -17,17 +17,18 @@
                         </script>
                         <br/>
                         <p>Choose artical picture here:</p>
-                        <img style ="width: 533px; height: 325px; object-fit: cover;" src="{{ asset(Session::get('imgtitle')) }}" alt="#">
-                        <img style ="width: 533px; height: 325px; object-fit: cover;" src="{{ asset('storage/imgtitle/noimg.jpg') }}" alt="#">
+                        <div id="img-preview">
+                            <img style ="width: 533px; height: 325px; object-fit: cover;" src="{{asset('storage/imgtitle/noimg.jpg')}}" alt="">
+                        </div>
                         <hr/>
-                        <input type="file" name="imgtitle" id="imgtitle">
+                        <input type="file" id="imgtitle" name="imgtitle" accept="image/*"/>
                         <hr/>
                         <button type="submit">Create</button>
                     </form>
-
                 </div>
             </div>
         </div>
     </div>
 </section>
+@vite(['resources/js/admin/from.js'])
 @endsection
