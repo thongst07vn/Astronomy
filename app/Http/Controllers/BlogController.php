@@ -15,13 +15,16 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class BlogController extends Controller
 {
-    
+    protected $headtitle;
+    protected $content;
     public function showf(){
         if(!$this->checkadmin()){
             $tb = 'Please Login To Use This Fearture';
             return redirect('admin')->with('tb',$tb);
         }
-        return view('admin.layouts.form');
+        $this->headtitle='Insert Head Title';
+        $this->content='<p>This Is Your Content</p>';
+        return view('admin.layouts.form',['headtitle'=>$this->headtitle,'content'=>$this->content]);
     }
     public function editor(Request $REQUEST){
         $edit = $REQUEST -> floatingTextarea;
@@ -41,7 +44,7 @@ class BlogController extends Controller
             $imgtitle = "storage/imgtitle/" . $fileName;
         }
         DB::insert("insert into blogsum(headtitle, content, imgtitle) values (?,?,?)",[$headtitle,substr(strstr($contentsql,htmlentities('</h1>')),11),$imgtitle]);
-        return back()->with('imgtitle',$imgtitle);
+        return back();
     }
     public function post(int $id): View{
         $post = DB::Select('select * from blogsum where id = ?',[$id]);
@@ -49,4 +52,17 @@ class BlogController extends Controller
         $menu ='blog';
         return view('layouts.post',['menu' => $menu, 'post'=>$post]);
     }
+    public function delete(){   
+        
+    }
+    public function edit(Request $REQUEST,int $id):View{
+        $edits = DB::Select('select * from blogsum where id = ?',[$id]);
+        foreach($edits as $i){
+            $this->headtitle = $i->headtitle;
+            $this->content = $i->content;
+            $imgtitle = $i->imgtitle;
+        }
+        return view('admin.layouts.update',['headtitle'=>$this->headtitle,'content'=>$this->content,'imgtitle'=>$imgtitle]);
+    }
+    
 }

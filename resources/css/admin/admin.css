@@ -6,7 +6,9 @@
     --light: #6C7293;
     --dark: #000000;
 }
-
+body{
+    user-select: none;
+}
 .back-to-top {
     position: fixed;
     display: none;
@@ -203,7 +205,14 @@ a > img{
     background: var(--dark);
     border-radius: 40px;
 }
-
+.fromblog{
+    font-size: 30px;
+    color: var(--light);
+}
+.fromblog:hover{
+    z-index: 99999;
+    color: var(--light);
+}
 .content .navbar .dropdown-item {
     color: var(--light);
 }

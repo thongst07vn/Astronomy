@@ -278,7 +278,7 @@ header > section:nth-child(1) > a > img, .footer section:nth-child(1)>a>img{
 }
 .logout .dropbtn > img {
     border-radius: 50%;
-    max-width: none;
+    max-width: 100px;
     height: 100px;
     object-fit: cover;
 }
