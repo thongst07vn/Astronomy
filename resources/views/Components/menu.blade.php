@@ -7,6 +7,7 @@
             <nav>
                 <ul>
                     <li @class(['activeli' => $menu == 'index'])><a @class(['active1' => $menu == 'index']) href="/home">HOME</a></li>
+                    <li @class(['activeli' => $menu == 'map'])><a @class(['active1' => $menu == 'map']) href="/mapw">MAP</a></li>
                     <li><a href="/planet">PLANET</a></li>
                     <li><a href="/constellation">CONSTELLATION</a></li>
                     <li @class(['activeli' => $menu == 'blog'])><a @class(['active1' => $menu == 'blog']) href="/blog">BLOG</a></li>

@@ -17,6 +17,10 @@ class MenuController extends Controller
         $menu ='about';
         return view('layouts.about',['menu' => $menu]);
     }
+    public function map(Request $REQUEST): View{
+        $menu ='map';
+        return view('layouts.map',['menu' => $menu]);
+    }
     public function index(Request $REQUEST): View{
         $menu ='index';
         return view('layouts.index',['menu' => $menu]);
