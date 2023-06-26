@@ -1,6 +1,6 @@
 <nav class="logout">
     <div class="dropdown">
-        <span class="dropbtn"><img src="{{$avt}}"></span>
+        <span class="dropbtn"><img src="{{asset($avt)}}"></span>
         <form action="/" method="post" enctype="multipart/form-data">
             <input id="choose-avt"type="file" name="avatar">
             <input id="submit-avt"type="submit" value="Create">

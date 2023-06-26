@@ -8,29 +8,15 @@
             <!-- SLIDE -->
             <article>
                 <div class="slideshow-container">
-                    <div class="mySlides fade">
-                        <div class="number-text">1 / 3</div>
-                        <img class="my-pic" src="img/banner1.jpg" style="width:100%">
-                        
-                    </div>
-        
-                    <div class="mySlides fade">
-                        <div class="number-text">2 / 3</div>
-                        <img class="my-pic" src="img/banner2.jpg" style="width:100%">
-                    
-                    </div>
-                    
-                    <div class="mySlides fade">
-                        <div class="number-text">3 / 3</div>
-                        <img class="my-pic" src="img/banner3.jpg" style="width:100%">
-                        
-                    </div>
+                <img class="mySlides my-pic" src="{{asset('constellar/banner/banner1.jpg')}}" style="width:100%; object-fit:cover;">
+                    <img class="mySlides my-pic" src="{{asset('constellar/banner/banner2.jpg')}}" style="width:100%; object-fit:cover;">
+                    <img class="mySlides my-pic" src="{{asset('constellar/banner/banner3.jpg')}}" style="width:100%; object-fit:cover;">
                 <br>
                 <div style="text-align:center">
                     <span class="dot"></span> 
                     <span class="dot"></span> 
                     <span class="dot"></span> 
-                    </div>
+                </div>
             </article> 
         <div class="container-star">  
             <div class="content-star">

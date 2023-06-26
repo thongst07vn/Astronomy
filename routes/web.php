@@ -30,6 +30,7 @@ Route::get('/test',[AdminController::class,'signout']);
 Route::post('/admin/dashboard',[AdminController::class,'signin']);
 Route::get('/admin/dashboard',[AdminController::class,'show']);
 Route::get('/admin/table',[AdminController::class,'showtb']);
+Route::post('/admin/table/{id}',[AdminController::class,'delete']);
 Route::post('/admin/form',[BlogController::class,'editor']);
 Route::get('/admin/form',[BlogController::class,'showf']);
 Route::get('/admin/form/{id}',[BlogController::class,'edit']);

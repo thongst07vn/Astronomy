@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-<x-menu menu="post"/>
+<x-menu menu="blog"/>
 <main id='post-page'>
     @vite(['resources/css/post.css'])
     <section class="post-banner"></section>

@@ -79,7 +79,7 @@ class LoginController extends BaseController
         }
     }
     public function signout(Request $REQUEST){
-        $r = $REQUEST->session()->flush();
+        $r = session(['username1'=>null]);
         return redirect('/');
     }
     public function forgotmail(Request $REQUEST):View{

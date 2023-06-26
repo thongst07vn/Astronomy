@@ -52,7 +52,9 @@ body {
   .active {
     background-color: white;
   }
-  
+  .active1{
+    background-color: black !important;
+  }
   /* Fading animation */
   .fade {
     animation-name: fade;
