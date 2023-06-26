@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
 <x-menu menu="constellation"/>
-@vite(['resources/css/constellar.css','resources/js/bootstrap.js','resources/js/constellar.js'])
+@vite(['resources/css/constellar.css','resources/js/app.js','resources/js/constellar.js'])
 <main>
     <div class="container-fluid">
 

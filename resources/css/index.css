@@ -70,7 +70,7 @@ header ul{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    height: 62px;
+    height: 140px;
     line-height: 1;
 }
 @property --angle {
@@ -192,6 +192,38 @@ header > section:nth-child(1) > a > img, .footer section:nth-child(1)>a>img{
       opacity: 1;
     }
   }
+
+.dropdownmenu {
+  display: inline-block;
+}
+
+.content {
+  display: none;
+  margin: 0;
+  padding: 20px 0px;
+  text-align: left;
+  font-size: 20px;
+  z-index: 1;
+  position: absolute;
+  background-color: transparent;
+  height: 100px;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.content a{
+  padding: 12px 10px !important;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.content a:hover {background-color:white;}
+
+.dropdownmenu:hover .content {
+  display: block;
+}
+  /* logout */
 .logout .dropbtn {
     cursor: pointer;
     display: flex;
@@ -206,7 +238,9 @@ header > section:nth-child(1) > a > img, .footer section:nth-child(1)>a>img{
     background: rgb(255,118,93);
     box-sizing:  unset;
 }
-  
+.logout > .dropdown ul{
+  height: 55px;
+}
   /* The container <div> - needed to position the dropdown content */
 .logout .dropdown {
     position: relative;
@@ -222,8 +256,7 @@ header > section:nth-child(1) > a > img, .footer section:nth-child(1)>a>img{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-.logout .dropdown-content li:nth-child(2),
-.logout .dropdown-content li:nth-child(3){
+.logout .dropdown-content li:nth-child(2){
     background-color: #f9f9f9 !important;
 }
   /* Links inside the dropdown */
@@ -269,7 +302,7 @@ header > section:nth-child(1) > a > img, .footer section:nth-child(1)>a>img{
 .logout:hover #avatar102>#avatar101, #avatar102:hover  #avatar101{
   opacity: 1;
 }
-.dropdown:hover img, .dropbtn > img:hover{
+.logout .dropdown:hover img, .dropbtn > img:hover{
   filter: blur(5px);
 }
   /* Change the background color of the dropdown button when the dropdown content is shown */

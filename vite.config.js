@@ -21,7 +21,6 @@ export default defineConfig({
                     'resources/css/post.css',
                     'resources/css/constellar.css',
                     'resources/js/constellar.js',
-                    'resources/js/bootstrap.js'
 
                 ],
             refresh: true,

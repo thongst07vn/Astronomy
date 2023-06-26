@@ -27,10 +27,14 @@ class MenuController extends Controller
         return view('layouts.blog',['menu' => $menu, 'blog'=>$blog]);
     }
     public function constellation(Request $REQUEST): View{
-        $menu ='contellation';
+        $menu ='constellation';
         $constellar = DB::Select('select * from constellar');
         $zodiac = DB::Select('select * from zodiac');
         return view('layouts.constellar',['menu' => $menu,'constellar' => $constellar,'zodiac' => $zodiac ]);
+    }
+    public function planet(Request $REQUEST): View{
+        $menu ='planet';
+        return view('layouts.planet',['menu' => $menu]);
     }
     public function avatar(Request $request){
         $file = $request->file('avatar');
