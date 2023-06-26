@@ -6,29 +6,29 @@
     <section class="blog-banner"></section>
     <section class="blog-content">
         <div class='blog-side'>
-          @foreach($blog as $i)
-            @if($i->id%2 != 0)
+          @foreach($blog as $i => $value)
+            @if(($i+1)%2 != 0)
             <div class='blog1'>
               <div>
-                <img src="{{asset($i -> imgtitle)}}" alt="">
+                <img src="{{asset($value -> imgtitle)}}" alt="">
               </div>
               <div>
-                <h1>{!!html_entity_decode($i->headtitle)!!}</h1>
-                {!!html_entity_decode(Str::limit($i->content, 297))!!}
+                <h1>{!!html_entity_decode($value->headtitle)!!}</h1>
+                {!!html_entity_decode(Str::limit($value->content, 297))!!}
 
-                <p><a class="read-more" href="blog/{{$i->id}}">Read More</a></p>
+                <p><a class="read-more" href="blog/{{$value->id}}">Read More</a></p>
               </div>
             </div>
             @endif
-            @if($i->id%2==0)
+            @if(($i+1)%2==0)
             <div class='blog2'>
               <div>
-                <h1>{!!html_entity_decode($i->headtitle)!!}</h1>
-                {!!html_entity_decode(Str::limit($i->content, 297))!!}
-                <p><a class="read-more" href="blog/{{$i->id}}">Read More</a></p>
+                <h1>{!!html_entity_decode($value->headtitle)!!}</h1>
+                {!!html_entity_decode(Str::limit($value->content, 297))!!}
+                <p><a class="read-more" href="blog/{{$value->id}}">Read More</a></p>
               </div>
               <div>
-                <img src="{{asset($i -> imgtitle)}}" alt="">
+                <img src="{{asset($value -> imgtitle)}}" alt="">
               </div>
             </div>
             @endif
