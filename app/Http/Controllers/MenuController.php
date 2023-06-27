@@ -13,28 +13,33 @@ use Illuminate\Support\Facades\HASH;
 class MenuController extends Controller
 {
     use AuthorizesRequests, ValidatesRequests;
+    protected $menu;
     public function about(Request $REQUEST): View{
-        $menu ='about';
-        return view('layouts.about',['menu' => $menu]);
+        $this->menu ='about';
+        return view('layouts.about',['menu' => $this->menu]);
     }
     public function index(Request $REQUEST): View{
-        $menu ='index';
-        return view('layouts.index',['menu' => $menu]);
+        $this->menu ='index';
+        return view('layouts.index',['menu' => $this->menu]);
     }
     public function blog(Request $REQUEST): View{
         $blog = DB::Table('blogsum') -> Paginate(3);
-        $menu ='blog';
-        return view('layouts.blog',['menu' => $menu, 'blog'=>$blog]);
+        $this->menu ='blog';
+        return view('layouts.blog',['menu' => $this->menu, 'blog'=>$blog]);
     }
     public function constellation(Request $REQUEST): View{
-        $menu ='constellation';
+        $this->menu ='constellation';
         $constellar = DB::Select('select * from constellar');
         $zodiac = DB::Select('select * from zodiac');
-        return view('layouts.constellar',['menu' => $menu,'constellar' => $constellar,'zodiac' => $zodiac ]);
+        return view('layouts.constellar',['menu' => $this->menu,'constellar' => $constellar,'zodiac' => $zodiac ]);
     }
     public function planet(Request $REQUEST): View{
-        $menu ='planet';
-        return view('layouts.planet',['menu' => $menu]);
+        $this->menu ='planet';
+        return view('layouts.planet',['menu' => $this->menu]);
+    }
+    public function observatory(Request $REQUEST): View{
+        $this->menu ='observatory';
+        return view('layouts.observatory',['menu' => $this->menu]);
     }
     public function avatar(Request $request){
         $file = $request->file('avatar');
