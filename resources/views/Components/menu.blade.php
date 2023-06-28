@@ -7,9 +7,9 @@
             <nav>
                 <ul>
                     <li @class(['activeli' => $menu == 'index'])><a @class(['active1' => $menu == 'index']) href="/home">HOME</a></li>
-                    <li @class(['activeli' => $menu == 'constellation' || $menu == 'planet'])>
+                    <li @class(['activeli' => $menu == 'astronomy'])>
                         <div class='dropdownmenu'>
-                            <a @class(['activeli' => $menu == 'constellation']) href="javascript:void(0)">ASTRONOMY</a>
+                            <a @class(['activeli' => $menu == 'astronomy']) href="javascript:void(0)">ASTRONOMY</a>
                             <div class="content">
                                 <a href="/planet">PLANET</a>
                                 <a href="/constellation">CONSTELLATION</a>
@@ -37,9 +37,9 @@
             <nav>
                 <ul>
                     <li @class(['activeli' => $menu == 'index'])><a @class(['active1' => $menu == 'index']) href="/home">HOME</a></li>
-                    <li @class(['activeli' => $menu == 'constellation' || $menu == 'planet'])>
+                    <li @class(['activeli' => $menu == 'astronomy'])>
                         <div class='dropdownmenu'>
-                            <a @class(['activeli' => $menu == 'constellation']) href="javascript:void(0)">ASTRONOMY</a>
+                            <a @class(['activeli' => $menu == 'astronomy']) href="javascript:void(0)">ASTRONOMY</a>
                             <div class="content">
                                 <a href="/planet">PLANET</a>
                                 <a href="/constellation">CONSTELLATION</a>

@@ -3,14 +3,14 @@
     margin: 0;
 }
 body {
-    background: none repeat scroll 0 0 white;
+    background-image: url(../../public/image/screen.jpg) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
     font-family:Arial, Helvetica, sans-serif;
     font-weight: 400;
     position: relative;
     font-size: 16px;
     line-height: 1.5;
-    color: black;
-    
 }
 
 /* SLIDE MAIN */
@@ -50,7 +50,7 @@ body {
   }
   
   .active {
-    background-color: white;
+    background-color: transparent;
   }
   .active1{
     background-color: black !important;
@@ -94,8 +94,8 @@ body {
     display: flex;
     list-style: none;
     margin: 30px;
-    padding: 0;
-    /* border-bottom: 3px solid #dddd; */
+    padding-bottom: 5px;
+    border-bottom: 1px solid #dddd;
     
     
 }
@@ -110,7 +110,7 @@ body {
     padding: 6px 10px;
     text-transform: uppercase;
     border: 1px solid #bebebe;
-    color: #555;
+    color: white;
     left: 470px;
     top: 5px;
    
@@ -197,12 +197,12 @@ ul.month-stars li .star-info a {
 ul.month-stars li .star-info a.product-name{
     font-size: 25px;
     text-transform: uppercase;
-    color: red;
+    color: white;
     padding: 3px 0px;
     text-align: center;
 }
 ul.month-stars li .star-info a.product-detail{
-    color: #334862;
+    color: white;
     padding: 3px 0px;
     text-align: center;
 }

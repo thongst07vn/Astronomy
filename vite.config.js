@@ -13,6 +13,7 @@ export default defineConfig({
                     'resources/css/admin/admin.css',
                     'resources/css/admin/alert.css',
                     'resources/js/admin/from.js',
+                    'resources/js/admin/fromconstellar.js',
                     'resources/css/admin/loginadmin.css',
                     'resources/js/admin/loginadmin.js', 
                     'resources/js/admin/admin.js',
@@ -25,6 +26,8 @@ export default defineConfig({
                     'resources/js/constellar.js',  
                     'resources/js/map.js',
                     'resources/css/map.css',
+                    'resources/css/planet.css',
+                    'resources/css/about.css',
 
                 ],
             refresh: true,

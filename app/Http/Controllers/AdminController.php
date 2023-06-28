@@ -23,6 +23,20 @@ class AdminController extends Controller
         $blog = DB::select('select * from blogsum');
         return view('admin.layouts.table',['user'=>$user,'blog'=>$blog]);
     }
+    public function showfc(){
+        if(!$this->checkadmin()){
+            $tb = 'Please Login To Use This Fearture';
+            return redirect('admin')->with('tb',$tb);
+        }
+        return view('admin.layouts.formconstellar',[]);
+    }
+    public function showo(){
+        if(!$this->checkadmin()){
+            $tb = 'Please Login To Use This Fearture';
+            return redirect('admin')->with('tb',$tb);
+        }
+        return view('admin.layouts.observatory',[]);
+    }
     public function shows(){
         return view('admin.loginadmin');
     }

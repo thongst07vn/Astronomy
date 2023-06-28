@@ -1,4 +1,4 @@
-const chooseFile = document.getElementById("imgtitle");
+const chooseFile = document.getElementById("linkpic");
 const imgPreview = document.getElementById("img-preview");
 chooseFile.addEventListener("change", function () {
     getImgData();
@@ -14,3 +14,4 @@ if (files) {
         });    
     }
 }
+    
