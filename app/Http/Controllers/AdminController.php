@@ -69,7 +69,10 @@ class AdminController extends Controller
     public function update(Request $REQUEST, int $id){
         $update = $REQUEST -> floatingTextarea;
         $contentsql = htmlentities($update);
-        $rawcontent = str_replace("\r\n"," ",strip_tags(html_entity_decode(substr(strstr($contentsql,htmlentities('</h1>')),11))));
+        $summary = str_replace("\n","",str_replace("\r\n","",strip_tags(html_entity_decode(substr(strstr($contentsql,htmlentities('</h1>')),11)))));
+        while(strpos($summary,'  ') === true){
+            str_replace('  ',' ',$sumary);
+        }
         if(Str::contains($update,'</h1>') == true){
             $headtitleupdate=strip_tags((strstr($update,'</h1>', true)."</h1>"), 'h1');
         }else{
@@ -88,8 +91,9 @@ class AdminController extends Controller
             $imgtitle = "storage/imgtitle/" . $fileName;
         }
         DB::update("update blogsum set headtitle =? where id=?",[$headtitleupdate,$id]);
-        DB::update("update blogsum set content = ? where id=?",[$rawcontent,$id]);
+        DB::update("update blogsum set content = ? where id=?",[substr(strstr($contentsql,htmlentities('</h1>')),11),$id]);
         DB::update("update blogsum set imgtitle = ? where id=?",[$imgtitle,$id]);
+        DB::update("update blogsum set summary = ? where id=?",[$summary,$id]);
         return redirect('admin/table');
     }
     public function delete(int $id){

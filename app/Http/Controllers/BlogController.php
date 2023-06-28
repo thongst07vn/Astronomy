@@ -29,6 +29,10 @@ class BlogController extends Controller
     public function editor(Request $REQUEST){
         $edit = $REQUEST -> floatingTextarea;
         $contentsql = htmlentities($edit);
+        $summary = str_replace("\n","",str_replace("\r\n","",strip_tags(html_entity_decode(substr(strstr($contentsql,htmlentities('</h1>')),11)))));
+        while(strpos($summary,'  ') === true){
+            str_replace('  ',' ',$sumary);
+        }
         if(Str::contains($edit,'</h1>') == true){
             $headtitle=strip_tags((strstr($edit,'</h1>', true)."</h1>"), 'h1');
         }else{
@@ -43,7 +47,7 @@ class BlogController extends Controller
             $file -> storeAs('public/imgtitle',$fileName);
             $imgtitle = "storage/imgtitle/" . $fileName;
         }
-        DB::insert("insert into blogsum(headtitle, content, imgtitle) values (?,?,?)",[$headtitle,substr(strstr($contentsql,htmlentities('</h1>')),11),$imgtitle]);
+        DB::insert("insert into blogsum(headtitle, content, imgtitle, summary) values (?,?,?,?)",[$headtitle,substr(strstr($contentsql,htmlentities('</h1>')),11),$imgtitle,$summary]);
         return back();
     }
     public function post(int $id): View{

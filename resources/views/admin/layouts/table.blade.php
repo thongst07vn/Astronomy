@@ -43,7 +43,7 @@
                         @foreach($blog as $blog)
                             <tr>
                                 <td>{{$blog->headtitle}}</td>
-                                <td>{!!html_entity_decode(Str::limit($blog->content, 50))!!}</td>
+                                <td>{!!html_entity_decode(Str::limit($blog->summary, 50))!!}</td>
                                 <td><img src="{{asset($blog -> imgtitle)}}" alt="" style="width: 106px; height: 65px; object-fit: cover;"></td>
                                 <td><a class="fromblog" href="/admin/form/{{$blog->id}}"><i class="fa fa-light fa-file-pen"></i></a></td>
                                 <td><a class="fromblog" href="/admin/delete/{{$blog->id}}"><i class="fa-regular fa-trash-can"></i></a></td>

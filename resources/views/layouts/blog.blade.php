@@ -14,7 +14,7 @@
               </div>
               <div>
                 <h1>{!!html_entity_decode($value->headtitle)!!}</h1>
-                {!!html_entity_decode(Str::limit($value->content, 297))!!}
+                <p>{!!html_entity_decode(Str::limit($value->summary, 150))!!}</p>
 
                 <p><a class="read-more" href="blog/{{$value->id}}">Read More</a></p>
               </div>
@@ -24,7 +24,7 @@
             <div class='blog2'>
               <div>
                 <h1>{!!html_entity_decode($value->headtitle)!!}</h1>
-                {!!html_entity_decode(Str::limit($value->content, 297))!!}
+                <p>{!!html_entity_decode(Str::limit($value->summary, 150))!!}</p>
                 <p><a class="read-more" href="blog/{{$value->id}}">Read More</a></p>
               </div>
               <div>
