@@ -11,7 +11,6 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">id</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Avatar</th>
                             </tr>
@@ -19,7 +18,6 @@
                         <tbody>
                         @foreach ($user as $user)
                             <tr>
-                                <th scope="row">{{$user->id}}</th>
                                 <td>{{$user->username}}</td>
                                 <td><img src="{{asset($user->avatar)}}" alt="" style="width: 50px; height: 50px; object-fit: cover;"></td>
                             </tr>
@@ -34,7 +32,6 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">id</th>
                                 <th scope="col">Head Title</th>
                                 <th scope="col">Content</th>
                                 <th scope="col">Image Title</th>
@@ -45,12 +42,11 @@
                         <tbody>
                         @foreach($blog as $blog)
                             <tr>
-                                <th scope="row">{{$blog->id}}</th>
                                 <td>{{$blog->headtitle}}</td>
                                 <td>{!!html_entity_decode(Str::limit($blog->content, 50))!!}</td>
                                 <td><img src="{{asset($blog -> imgtitle)}}" alt="" style="width: 106px; height: 65px; object-fit: cover;"></td>
                                 <td><a class="fromblog" href="/admin/form/{{$blog->id}}"><i class="fa fa-light fa-file-pen"></i></a></td>
-                                <td><a class="fromblog" href="/admin/form/{{$blog->id}}"><i class="fa-regular fa-trash-can"></i></a></td>
+                                <td><a class="fromblog" href="/admin/delete/{{$blog->id}}"><i class="fa-regular fa-trash-can"></i></a></td>
                             </tr>
                         @endforeach
                         </tbody>

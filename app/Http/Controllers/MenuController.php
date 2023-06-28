@@ -28,13 +28,13 @@ class MenuController extends Controller
         return view('layouts.blog',['menu' => $this->menu, 'blog'=>$blog]);
     }
     public function constellation(Request $REQUEST): View{
-        $this->menu ='constellation';
+        $this->menu ='astronomy';
         $constellar = DB::Select('select * from constellar');
         $zodiac = DB::Select('select * from zodiac');
         return view('layouts.constellar',['menu' => $this->menu,'constellar' => $constellar,'zodiac' => $zodiac ]);
     }
     public function planet(Request $REQUEST): View{
-        $this->menu ='planet';
+        $this->menu ='astronomy';
         return view('layouts.planet',['menu' => $this->menu]);
     }
     public function observatory(Request $REQUEST): View{

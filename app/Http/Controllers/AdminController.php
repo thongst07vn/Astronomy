@@ -14,14 +14,6 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class AdminController extends Controller
 {
     use AuthorizesRequests, ValidatesRequests;
-    public function show(){
-        if(!$this->checkadmin()){
-            $tb = 'Please Login To Use This Fearture';
-            return redirect('admin')->with('tb',$tb);
-        }
-        return view('admin.layouts.dashboard');
-        
-    }
     public function showtb(){
         if(!$this->checkadmin()){
             $tb = 'Please Login To Use This Fearture';
@@ -44,7 +36,7 @@ class AdminController extends Controller
         if(count($manguser)){
             foreach($mangpassword as $check){
                 if(Hash::check($passwords,$check->passwords)){
-                    return redirect('admin/dashboard');
+                    return redirect('admin/table');
 
                 }else{
                     $tb = 'Password Incorrect';
@@ -84,6 +76,15 @@ class AdminController extends Controller
         DB::update("update blogsum set headtitle =? where id=?",[$headtitleupdate,$id]);
         DB::update("update blogsum set content = ? where id=?",[$rawcontent,$id]);
         DB::update("update blogsum set imgtitle = ? where id=?",[$imgtitle,$id]);
+        return redirect('admin/table');
+    }
+    public function delete(int $id){
+        $blog = DB::select('select * from blogsum');
+        $user = DB::select('select username,avatar from Loginuser');
+        return view('admin.layouts.delete',['user'=>$user,'blog'=>$blog]);
+    }
+    public function deleted(int $id){
+        DB::delete('delete from blogsum where id = ?',[$id]);
         return redirect('admin/table');
     }
 }

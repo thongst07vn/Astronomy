@@ -16,6 +16,7 @@ body{
     bottom: 45px;
     z-index: 99;
 }
+
 a > img{
     width: 250px;
 }
@@ -300,4 +301,10 @@ a > img{
 .testimonial-carousel .owl-dot.active {
     background: var(--dark);
     border-color: var(--primary);
+}
+span > a{
+    color: var(--light);
+}
+span > a:hover{
+    color: var(--light);
 }

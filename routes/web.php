@@ -27,10 +27,10 @@ Route::get('/welcome',[LoginController::class,'signout']);
 
 Route::get('/admin',[AdminController::class,'shows']);
 Route::get('/test',[AdminController::class,'signout']);
-Route::post('/admin/dashboard',[AdminController::class,'signin']);
-Route::get('/admin/dashboard',[AdminController::class,'show']);
+Route::post('/admin/table',[AdminController::class,'signin']);
 Route::get('/admin/table',[AdminController::class,'showtb']);
-Route::post('/admin/table/{id}',[AdminController::class,'delete']);
+Route::post('/admin/delete/{id}',[AdminController::class,'deleted']);
+Route::get('/admin/delete/{id}',[AdminController::class,'delete']);
 Route::post('/admin/form',[BlogController::class,'editor']);
 Route::get('/admin/form',[BlogController::class,'showf']);
 Route::get('/admin/form/{id}',[BlogController::class,'edit']);

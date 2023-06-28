@@ -52,10 +52,6 @@ class BlogController extends Controller
         $menu ='blog';
         return view('layouts.post',['menu' => $menu, 'post'=>$post]);
     }
-    public function delete(int $id){   
-        DB::delete('delete form blogsum where id = ?',[$id]);
-        return redirect('admin/table');
-    }
     public function edit(Request $REQUEST,int $id):View{
         $edits = DB::Select('select * from blogsum where id = ?',[$id]);
         foreach($edits as $i){

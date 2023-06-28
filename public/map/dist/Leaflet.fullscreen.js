@@ -1,4 +1,5 @@
 (function (factory) {
+    console.log('hoạt động')
     if (typeof define === 'function' && define.amd) {
         // AMD
         define(['leaflet'], factory);
@@ -13,6 +14,7 @@
         factory(window.L);
     }
 }(function (L) {
+    console.log('hoạt động')
     L.Control.Fullscreen = L.Control.extend({
         options: {
             position: 'topleft',

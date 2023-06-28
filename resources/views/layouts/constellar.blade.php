@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-<x-menu menu="constellation"/>
+<x-menu menu="astronomy"/>
 @vite(['resources/css/constellar.css','resources/js/app.js','resources/js/constellar.js'])
 <main>
     <div class="container-fluid">
