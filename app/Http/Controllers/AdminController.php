@@ -104,7 +104,7 @@ class AdminController extends Controller
         $edito = DB::Select('select * from observatory where id = ?',[$id]);
         return view('admin.layouts.observatoryupdate',['edito'=>$edito]);
     }
-    public function obedit(Request $REQUEST, int $id){
+    public function obedit(Request $REQUEST){
         $nameo = $REQUEST -> nameo;
         $instruments = $REQUEST -> instruments;
         $altitude = $REQUEST -> altitude;
@@ -112,7 +112,7 @@ class AdminController extends Controller
         $description = $REQUEST -> description;
         $lat = $REQUEST -> lat;
         $lng = $REQUEST -> lng;
-        DB::insert("insert into blogsum(name, instruments, altitude, type, description, lat, lng) values (?,?,?,?)",[$name, $instruments, $altitude, $type, $description, $lat, $lng]);
+        DB::insert("insert into observatory(name, instruments, altitude, type, description, lat, lng) values (?,?,?,?)",[$nameo, $instruments, $altitude, $type, $description, $lat, $lng]);
         return back();
     }
     public function updateo(Request $REQUEST, int $id){
