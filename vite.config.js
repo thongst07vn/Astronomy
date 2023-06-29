@@ -23,6 +23,7 @@ export default defineConfig({
                     'resources/css/blog.css',
                     'resources/css/post.css',
                     'resources/css/constellar.css',
+                    'resources/css/constellardetail.css',
                     'resources/js/constellar.js',  
                     'resources/js/map.js',
                     'resources/css/map.css',

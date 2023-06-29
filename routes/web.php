@@ -46,6 +46,7 @@ Route::get('/about',[MenuController::class,'about']);
 Route::get('/blog',[MenuController::class,'blog']);
 Route::get('/blog/{id}',[BlogController::class,'post']);
 Route::get('/constellation',[MenuController::class,'constellation']);
+Route::get('/constellation/{name}',[MenuController::class,'constellar']);
 Route::get('/planet',[MenuController::class,'planet']);
 Route::get('/observatory',[MenuController::class,'observatory']);
 

@@ -33,6 +33,12 @@ class MenuController extends Controller
         $zodiac = DB::Select('select * from zodiac');
         return view('layouts.constellar',['menu' => $this->menu,'constellar' => $constellar,'zodiac' => $zodiac ]);
     }
+    public function constellar(Request $REQUEST,string $name): View{
+        $this->menu ='astronomy';
+        $constellar = DB::Select('select * from constellar');
+        $zodiac = DB::Select('select * from zodiac');
+        return view('layouts.constellation',['menu' => $this->menu,'constellar' => $constellar,'zodiac' => $zodiac ]);
+    }
     public function planet(Request $REQUEST): View{
         $this->menu ='astronomy';
         $file = file_get_contents(public_path() . "/src/data/solarsystem.json");

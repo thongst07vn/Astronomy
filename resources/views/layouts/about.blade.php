@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-@vite([''resources/css/about.css''])
+@vite(['resources/css/about.css'])
 <x-menu menu="about"/>
 <main>
   <div style="padding-left:16px">

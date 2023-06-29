@@ -5,4 +5,4 @@
     @foreach($planets as $i => $value)
         <p>{{$value['name']}}</p>
     @endforeach
-@endsectionf
+@endsection
