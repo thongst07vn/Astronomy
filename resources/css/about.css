@@ -3,4 +3,121 @@ body{
     background-repeat: no-repeat !important;
     background-size: cover !important;
     color: white;
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
 }
+body:focus{
+    outline:none;
+}
+.container-ab{
+    position: relative;
+    width: auto;
+    height: auto;
+    /* top: 200px; */
+}
+.text-center{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    text-rendering: optimizeSpeed;
+}
+.prm-ct{
+    position:absolute;
+    top: 140%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.05em;
+    width: fit-content;
+    width: 850px;
+    text-rendering: optimizeSpeed;
+    border: 2px solid  blue;
+    
+    
+}
+
+.row{
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row wrap;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.content-ab{
+    position: relative;
+    margin: 0;
+    padding: 0 15px 30px;
+    
+}
+.box-ab{
+    position: relative;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-box-flex: 1;
+    box-sizing: border-box;
+    left: 390px;
+    top: 260px;
+    font-size: large;
+    text-align: justify;
+}
+h2 {
+    font-size: 3em;
+}
+.rules-ab{
+    position: absolute;
+    /* text-align: justify; */
+    width: 500px;
+}
+
+
+h2, h3, h4, h5 {
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 0.02em;
+    text-rendering: optimizeSpeed;
+    border-bottom: 2px solid royalblue;
+    display: inline-block;  
+}
+h3, h4, h5 {
+    font-size: 1em;
+}
+.question-style{
+    text-align: center;
+    list-style: none;
+    border-bottom: 2px solid royalblue;
+    font-size: 20px;
+
+}
+.pic-ab{
+    position: relative;
+    margin: 0;
+    padding: 0 15px 30px;
+    width: 100%;
+    flex: 1 0 0%;
+    /* left: 850px; */
+}
+.boximg-ab{
+    position: relative;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-box-flex: 1;
+    margin-right: auto;
+    margin-left: 0;
+  
+}
+.img-ab{
+    position: absolute;
+    width: 100%;
+    left: 920px;
+    top: 190px;
+}
+
+
