@@ -13,7 +13,6 @@ var i = 0;
 var j = 0;
 var marker = [];
 mangtam = window.data.observatory;
-console.log(mangtam)
 for(i=0; i<mangtam.length; i++){
     console.log(`OBSERVATORY NAME: `+ mangtam[i].name + `<br/> INSTRUMENTS: `+ mangtam[i].instruments)
     var point = L.marker([parseFloat(mangtam[i].lng),parseFloat(mangtam[i].lat)]).addTo(map).bindPopup(`OBSERVATORY NAME: `+ mangtam[i].name + `<br/> INSTRUMENTS: `+ mangtam[i].instruments + `<br/>ALTITUDE: `+ mangtam[i].altitude + `<br/>TYPE: `+ mangtam[i].type + `<br/>DESCRIPTION SOURCE: `+ mangtam[i].descriptionsource + `<br/>LOCATION: ` +parseFloat(mangtam[i].lng) + ' : ' + parseFloat(mangtam[i].lat));

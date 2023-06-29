@@ -23,7 +23,12 @@ class AdminController extends Controller
         $user = DB::select('select id,username,avatar from Loginuser');
         $blog = DB::select('select * from blogsum');
         $observatory = DB::Select('select * from observatory');
-        return view('admin.layouts.table',['user'=>$user,'blog'=>$blog,'observatory'=>$observatory]);
+        $constellar = DB::Select('select * from constellar');
+        $zodiac = DB::Select('select * from zodiac');
+        $file = file_get_contents(public_path() . "/src/data/solarsystem.json");
+        $file_decode = json_decode($file, true);
+        $planets = $file_decode["planets"];
+        return view('admin.layouts.table',['user'=>$user,'blog'=>$blog,'observatory'=>$observatory,'constellar'=>$constellar,'zodiac'=>$zodiac,'planets'=>$planets]);
     }
     //show form constellation
     public function showfc(){
@@ -111,26 +116,9 @@ class AdminController extends Controller
         $type = $REQUEST -> type;
         $description = $REQUEST -> description;
         $lat = $REQUEST -> lat;
-        $lng = $REQUEST -> lng;
-        DB::insert("insert into observatory(name, instruments, altitude, type, description, lat, lng) values (?,?,?,?)",[$nameo, $instruments, $altitude, $type, $description, $lat, $lng]);
+        $lng = $REQUEST -> long;
+        DB::insert("insert into observatory(name, instruments, altitude, type, descriptionsource, lat, lng) values (?,?,?,?,?,?,?)",[$nameo, $instruments, $altitude, $type, $description, $lat, $lng]);
         return back();
-    }
-    public function updateo(Request $REQUEST, int $id){
-        $nameo = $REQUEST -> nameo;
-        $instruments = $REQUEST -> instruments;
-        $altitude = $REQUEST -> altitude;
-        $type = $REQUEST -> type;
-        $description = $REQUEST -> description;
-        $lat = $REQUEST -> lat;
-        $lng = $REQUEST -> lng;
-        DB::update("update observatory set name = ? where id=?",[$nameo,$id]);
-        DB::update("update observatory set instruments = ? where id=?",[$instruments,$id]);
-        DB::update("update observatory set altitude = ? where id=?",[$altitude,$id]);
-        DB::update("update observatory set type = ? where id=?",[$type,$id]);
-        DB::update("update observatory set description = ? where id=?",[$description,$id]);
-        DB::update("update observatory set lat = ? where id=?",[$lat,$id]);
-        DB::update("update observatory set lng = ? where id=?",[$lng,$id]);
-        return redirect('admin/table');
     }
     public function delete(int $id){
         $blog = DB::select('select * from blogsum');
@@ -141,5 +129,15 @@ class AdminController extends Controller
         DB::delete('delete from blogsum where id = ?',[$id]);
         return redirect('admin/table');
     }
+    public function deleteob(int $id){
+        $blog = DB::select('select * from blogsum');
+        $user = DB::select('select username,avatar from Loginuser');
+        return view('admin.layouts.deleteob',['user'=>$user,'blog'=>$blog]);
+    }
+    public function deletedob(int $id){
+        DB::delete('delete from observatory where id = ?',[$id]);
+        return redirect('admin/table');
+    }
 }
+
     
