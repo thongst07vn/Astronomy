@@ -58,6 +58,7 @@ Route::get('/constellation',[MenuController::class,'constellation']);
 Route::get('/constellation/{name}',[MenuController::class,'constellar']);
 Route::get('/planet',[MenuController::class,'planet']);
 Route::get('/observatory',[MenuController::class,'observatory']);
+Route::get('/planet/{id}',[MenuController::class,'planetdetails']);
 
 
 
