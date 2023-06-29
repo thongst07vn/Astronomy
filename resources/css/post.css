@@ -24,11 +24,11 @@ body{
 }
 .post-side{
     background-color: #001932;
-    flex:80%;
+    flex:100%;
     display: flex;
     flex-direction: column;
-    width:80%;
-    max-width: 80%;
+    width:100%;
+    max-width: 100%;
     height: 100%;
 }
 .side-bar-1{
@@ -37,6 +37,7 @@ body{
     flex:20%;
 }
 .post-side img{
+    align-self: center;
     object-fit: cover;
     width: 1066px;
     height: 650px;

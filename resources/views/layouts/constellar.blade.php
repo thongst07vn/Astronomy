@@ -42,11 +42,11 @@
                                         <a href="">
                                             <img src="{{asset($i -> linkspic)}}"  class="star-img">
                                         </a>
-                                        <a href="" class="choose-now">Choose now</a>
+                                        <a href="/constellation/{{$i -> name}}" class="choose-now">Choose now</a>
                                     </div>
                                     <div class="star-info">
-                                        <a href="" class="product-name">{{$i -> name}}</a>
-                                        <a href="" class="product-detail">
+                                        <a href="/constellation/{{$i -> name}}" class="product-name">{{$i -> name}}</a>
+                                        <a href="/constellation/{{$i -> name}}" class="product-detail">
                                             <p>{{$i -> period}}</p>                   
                                         </a>
                                     </div>
