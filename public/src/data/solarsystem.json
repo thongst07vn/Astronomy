@@ -47,6 +47,9 @@
         {
             "id": 1,
             "name": "Mercury",
+            "discovered_date":"prehistoric",
+            "atmosphere":"0.5 nPa",
+            "linkspic":"storage/planet/mercury.jpg",
             "diameter": 4879,
             "mass": 0.330,
             "gravity": 3.7,
@@ -78,6 +81,9 @@
         {
             "id": 2,
             "name": "Venus",
+            "discovered_date":"prehistoric",
+            "atmosphere":"9.3 Mpa",
+            "linkspic":"storage/planet/venus.jpg",
             "diameter": 12104,
             "mass": 4.87,
             "gravity": 8.9,
@@ -108,6 +114,9 @@
         {
             "id": 3,
             "name": "Earth",
+            "discovered_date":"prehistoric",
+            "atmosphere":"101.325 kPa",
+            "linkspic":"storage/planet/earth.jpg",
             "diameter": 12756,
             "mass": 5.97,
             "gravity": 9.8,
@@ -168,6 +177,9 @@
         {
             "id": 4,
             "name": "Mars",
+            "discovered_date":"prehistoric",
+            "atmosphere":"0.636 kPa",
+            "linkspic":"storage/planet/mars.jpg",
             "diameter": 6792,
             "mass": 0.642,
             "gravity": 3.7,
@@ -241,6 +253,9 @@
         {
             "id": 5,
             "name": "Jupiter",
+            "discovered_date":"prehistoric",
+            "atmosphere":"200–600 kPa",
+            "linkspic":"storage/planet/jupiter.jpg",
             "diameter": 142984,
             "mass": 1898,
             "gravity": 23.1,
@@ -908,6 +923,9 @@
         {
             "id": 6,
             "name": "Saturn",
+            "discovered_date":"prehistoric",
+            "atmosphere":"140 kPa",
+            "linkspic":"storage/planet/saturn.jpg",
             "diameter": 120536,
             "mass": 568,
             "density": 687,
@@ -1512,6 +1530,9 @@
         {
             "id": 7,
             "name": "Uranus",
+            "discovered_date":"1787",
+            "atmosphere":"130 kPa",
+            "linkspic":"storage/planet/uranus.jpg",
             "mass": 86.8,
             "diameter": 51118,
             "density": 1271,
@@ -2067,6 +2088,9 @@
         {
             "id": 8,
             "name": "Neptune",
+            "discovered_date":"1846",
+            "atmosphere":"10 kPa",
+            "linkspic":"storage/planet/neptune.jpg",
             "mass": 102,
             "diameter": 49528,
             "density": 1638,
@@ -2370,6 +2394,9 @@
         {
             "id": 9,
             "name": "Pluto",
+            "discovered_date":"1930",
+            "atmosphere":"6,5-24 μbar",
+            "linkspic":"storage/planet/pluto.jpg",
             "mass": 102,
             "diameter": 2374,
             "density": 1638,

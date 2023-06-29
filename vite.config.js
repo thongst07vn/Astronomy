@@ -29,6 +29,7 @@ export default defineConfig({
                     'resources/css/map.css',
                     'resources/css/planet.css',
                     'resources/css/about.css',
+                    'resources/css/planetdetail.css',
 
                 ],
             refresh: true,
