@@ -15,6 +15,11 @@
       <p>Welcome to world top Observatory</p>
       <div id='map'></div>
   </div>
+  <script>
+    window.data = {!!json_encode([
+      'observatory' => $observatory
+    ])!!}
+  </script>
 @vite(['resources/js/map.js'])
 </main>
 @endsection

@@ -21,7 +21,8 @@ class AdminController extends Controller
         }
         $user = DB::select('select id,username,avatar from Loginuser');
         $blog = DB::select('select * from blogsum');
-        return view('admin.layouts.table',['user'=>$user,'blog'=>$blog]);
+        $observatory = DB::Select('select * from observatory');
+        return view('admin.layouts.table',['user'=>$user,'blog'=>$blog,'observatory'=>$observatory]);
     }
     public function showfc(){
         if(!$this->checkadmin()){
@@ -95,6 +96,10 @@ class AdminController extends Controller
         DB::update("update blogsum set imgtitle = ? where id=?",[$imgtitle,$id]);
         DB::update("update blogsum set summary = ? where id=?",[$summary,$id]);
         return redirect('admin/table');
+    }
+    public function edito(Request $REQUEST, int $id){
+        $edito = DB::Select('select * from observatory where id = ?',[$id]);
+        return view('admin.layouts.observatoryupdate',['edito'=>$edito]);
     }
     public function delete(int $id){
         $blog = DB::select('select * from blogsum');

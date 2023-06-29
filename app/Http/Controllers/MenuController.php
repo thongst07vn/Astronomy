@@ -48,7 +48,8 @@ class MenuController extends Controller
     }
     public function observatory(Request $REQUEST): View{
         $this->menu ='observatory';
-        return view('layouts.observatory',['menu' => $this->menu]);
+        $observatory = DB::Select('select * from observatory');
+        return view('layouts.observatory',['menu' => $this->menu],compact('observatory'));
     }
     public function avatar(Request $request){
         $file = $request->file('avatar');

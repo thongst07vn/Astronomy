@@ -16,7 +16,7 @@
             <a  @class(['nav-item', 'nav-link','active' => $menu == 'form']) href="/admin/form"><i class="fa fa-table me-2"></i>Form Blog</a>
             <a  @class(['nav-item', 'nav-link','active' => $menu == 'formconstellar']) href="/admin/formconstellar"><i class="fa fa-table me-2"></i>FormConstellaton</a>
             <a  @class(['nav-item', 'nav-link','active' => $menu == 'observatory']) href="/admin/observatory"><i class="fa fa-light fa-globe me-2"></i>Observatory</a>
-            <a class = 'nav-item nav-link' href="/test"><i class="fa fa-arrow-right-from-bracket"></i>Sign Out</a>
+            <a class = 'nav-item nav-link' href="/test"><i class="fa fa-arrow-right-from-bracket me-2"></i>Sign Out</a>
         </div>
         
     </nav>

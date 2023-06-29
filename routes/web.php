@@ -37,6 +37,7 @@ Route::get('/admin/form/{id}',[BlogController::class,'edit']);
 Route::post('/admin/form/{id}',[AdminController::class,'update']);
 Route::get('/admin/formconstellar',[AdminController::class,'showfc']);
 Route::get('/admin/observatory',[AdminController::class,'showo']);
+Route::get('/admin/observatory/{id}',[AdminController::class,'edito']);
 
 Route::post('/home',[LoginController::class,'signin']);
 Route::get('/',[MenuController::class,'index']);
