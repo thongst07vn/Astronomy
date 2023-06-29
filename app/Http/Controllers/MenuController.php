@@ -35,7 +35,10 @@ class MenuController extends Controller
     }
     public function planet(Request $REQUEST): View{
         $this->menu ='astronomy';
-        return view('layouts.planet',['menu' => $this->menu]);
+        $file = file_get_contents(public_path() . "/src/data/solarsystem.json");
+        $file_decode = json_decode($file, true);
+        $planets = $file_decode["planets"];
+        return view('layouts.planet',['menu' => $this->menu,'planets' => $planets]);
     }
     public function observatory(Request $REQUEST): View{
         $this->menu ='observatory';

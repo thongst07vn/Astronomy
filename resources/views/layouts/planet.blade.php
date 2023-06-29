@@ -2,5 +2,7 @@
 @section('content')
 @vite(['resources/css/planet.css'])
 <x-menu menu="astronomy"/>
-tao thành công rồi
-@endsection
+    @foreach($planets as $i => $value)
+        <p>{{$value['name']}}</p>
+    @endforeach
+@endsectionf

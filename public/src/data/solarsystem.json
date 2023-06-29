@@ -41,6 +41,7 @@
                 "base": "/src/assets/textures/sun_detailed.png"
             }
         }
+
     },
     "planets": [
         {
@@ -72,6 +73,7 @@
                     "topo": "/src/assets/textures/mercury_topo.jpg"
                 }
             }
+            
         },
         {
             "id": 2,
