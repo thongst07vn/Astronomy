@@ -29,15 +29,22 @@ Route::get('/admin',[AdminController::class,'shows']);
 Route::get('/test',[AdminController::class,'signout']);
 Route::post('/admin/table',[AdminController::class,'signin']);
 Route::get('/admin/table',[AdminController::class,'showtb']);
-Route::post('/admin/delete/{id}',[AdminController::class,'deleted']);
-Route::get('/admin/delete/{id}',[AdminController::class,'delete']);
+
+
 Route::post('/admin/form',[BlogController::class,'editor']);
 Route::get('/admin/form',[BlogController::class,'showf']);
 Route::get('/admin/form/{id}',[BlogController::class,'edit']);
 Route::post('/admin/form/{id}',[AdminController::class,'update']);
+Route::post('/admin/delete/{id}',[AdminController::class,'deleted']);
+Route::get('/admin/delete/{id}',[AdminController::class,'delete']);
+
 Route::get('/admin/formconstellar',[AdminController::class,'showfc']);
+
+
 Route::get('/admin/observatory',[AdminController::class,'showo']);
+Route::post('/admin/observatory',[AdminController::class,'obedit']);
 Route::get('/admin/observatory/{id}',[AdminController::class,'edito']);
+Route::post('/admin/observatory/{id}',[AdminController::class,'updateo']);
 
 Route::post('/home',[LoginController::class,'signin']);
 Route::get('/',[MenuController::class,'index']);

@@ -14,6 +14,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class AdminController extends Controller
 {
     use AuthorizesRequests, ValidatesRequests;
+    // show table
     public function showtb(){
         if(!$this->checkadmin()){
             $tb = 'Please Login To Use This Fearture';
@@ -24,6 +25,7 @@ class AdminController extends Controller
         $observatory = DB::Select('select * from observatory');
         return view('admin.layouts.table',['user'=>$user,'blog'=>$blog,'observatory'=>$observatory]);
     }
+    //show form constellation
     public function showfc(){
         if(!$this->checkadmin()){
             $tb = 'Please Login To Use This Fearture';
@@ -31,6 +33,7 @@ class AdminController extends Controller
         }
         return view('admin.layouts.formconstellar',[]);
     }
+    //show observatory
     public function showo(){
         if(!$this->checkadmin()){
             $tb = 'Please Login To Use This Fearture';
@@ -100,6 +103,34 @@ class AdminController extends Controller
     public function edito(Request $REQUEST, int $id){
         $edito = DB::Select('select * from observatory where id = ?',[$id]);
         return view('admin.layouts.observatoryupdate',['edito'=>$edito]);
+    }
+    public function obedit(Request $REQUEST, int $id){
+        $nameo = $REQUEST -> nameo;
+        $instruments = $REQUEST -> instruments;
+        $altitude = $REQUEST -> altitude;
+        $type = $REQUEST -> type;
+        $description = $REQUEST -> description;
+        $lat = $REQUEST -> lat;
+        $lng = $REQUEST -> lng;
+        DB::insert("insert into blogsum(name, instruments, altitude, type, description, lat, lng) values (?,?,?,?)",[$name, $instruments, $altitude, $type, $description, $lat, $lng]);
+        return back();
+    }
+    public function updateo(Request $REQUEST, int $id){
+        $nameo = $REQUEST -> nameo;
+        $instruments = $REQUEST -> instruments;
+        $altitude = $REQUEST -> altitude;
+        $type = $REQUEST -> type;
+        $description = $REQUEST -> description;
+        $lat = $REQUEST -> lat;
+        $lng = $REQUEST -> lng;
+        DB::update("update observatory set name = ? where id=?",[$nameo,$id]);
+        DB::update("update observatory set instruments = ? where id=?",[$instruments,$id]);
+        DB::update("update observatory set altitude = ? where id=?",[$altitude,$id]);
+        DB::update("update observatory set type = ? where id=?",[$type,$id]);
+        DB::update("update observatory set description = ? where id=?",[$description,$id]);
+        DB::update("update observatory set lat = ? where id=?",[$lat,$id]);
+        DB::update("update observatory set lng = ? where id=?",[$lng,$id]);
+        return redirect('admin/table');
     }
     public function delete(int $id){
         $blog = DB::select('select * from blogsum');
