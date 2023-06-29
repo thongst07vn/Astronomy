@@ -35,9 +35,11 @@ class MenuController extends Controller
     }
     public function constellar(Request $REQUEST,string $name): View{
         $this->menu ='astronomy';
-        $constellar = DB::Select('select * from constellar');
-        $zodiac = DB::Select('select * from zodiac');
-        return view('layouts.constellation',['menu' => $this->menu,'constellar' => $constellar,'zodiac' => $zodiac ]);
+        $allconstellar = DB::Select('select name from constellar');
+        $allzodiac = DB::Select('select name from zodiac');
+        $constellar = DB::Select('select * from constellar where name = ? ',[$name]);
+        $zodiac = DB::Select('select * from zodiac where name = ?',[$name]);
+        return view('layouts.constellation',['menu' => $this->menu,'constellar' => $constellar,'zodiac' => $zodiac,'allconstellar'=> $allconstellar,'allzodiac'=>$allzodiac ]);
     }
     public function planet(Request $REQUEST): View{
         $this->menu ='astronomy';

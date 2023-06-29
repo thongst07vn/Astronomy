@@ -12,7 +12,6 @@
             {!!html_entity_decode($i->content)!!}
         </div> 
         @endforeach
-        <div class='side-bar-1'></div>
     </section>
     <section class="post-banner"></section>
 </main>

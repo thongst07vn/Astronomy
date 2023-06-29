@@ -33,7 +33,7 @@
                             <input type="text" id="lat" name="lat" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label for="long" class="form-label">LONG: </label>    
+                            <label for="long" class="form-label">LNG: </label>    
                             <input type="text" id="long" name="long" class="form-control">
                         </div>
                         <button type="submit">Create</button>

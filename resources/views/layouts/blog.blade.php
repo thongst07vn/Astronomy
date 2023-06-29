@@ -34,9 +34,6 @@
             @endif
           @endforeach
           {{ $blog->render('list') }}
-        </div>
-        
-        <div class='side-bar-1'></div>
     </section>
     <section class="blog-banner"></section>
 </main>
