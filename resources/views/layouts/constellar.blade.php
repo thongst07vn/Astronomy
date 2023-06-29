@@ -39,7 +39,7 @@
                             <li>
                                 <div class="star-item">
                                     <div class="star-top">
-                                        <a href="">
+                                        <a href="/constellation/{{$i -> name}}">
                                             <img src="{{asset($i -> linkspic)}}"  class="star-img">
                                         </a>
                                         <a href="/constellation/{{$i -> name}}" class="choose-now">Choose now</a>
@@ -64,7 +64,7 @@
                             <li>
                                 <div class="star-item">
                                     <div class="star-top">
-                                        <a>
+                                        <a href="/constellation/{{$i -> name}}">
                                             <img src="{{asset($i -> linkspic)}}"  class="star-img">
                                         </a>
                                         <a href="/constellation/{{$i -> name}}" class="choose-now">Choose now</a>

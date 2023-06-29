@@ -43,8 +43,9 @@ Route::get('/admin/formconstellar',[AdminController::class,'showfc']);
 
 Route::get('/admin/observatory',[AdminController::class,'showo']);
 Route::post('/admin/observatory',[AdminController::class,'obedit']);
-Route::get('/admin/observatory/{id}',[AdminController::class,'edito']);
-Route::post('/admin/observatory/{id}',[AdminController::class,'updateo']);
+Route::get('/admin/delete/observatory/{id}',[AdminController::class,'deleteob']);
+Route::post('/admin/delete/observatory/{id}',[AdminController::class,'deletedob']);
+
 
 Route::post('/home',[LoginController::class,'signin']);
 Route::get('/',[MenuController::class,'index']);
