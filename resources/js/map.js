@@ -18,7 +18,7 @@ for(i=0; i<mangtam.length; i++){
     var point = L.marker([parseFloat(mangtam[i].lng),parseFloat(mangtam[i].lat)]).addTo(map).bindPopup(`OBSERVATORY NAME: `+ mangtam[i].name + `<br/> INSTRUMENTS: `+ mangtam[i].instruments + `<br/>ALTITUDE: `+ mangtam[i].altitude + `<br/>TYPE: `+ mangtam[i].type + `<br/>DESCRIPTION SOURCE: `+ mangtam[i].descriptionsource + `<br/>LOCATION: ` +parseFloat(mangtam[i].lng) + ' : ' + parseFloat(mangtam[i].lat));
     marker.push(point);
     marker[i].on(`click`,(e) => {
-        map.setView([e.latlng.lat,e.latlng.lng],40);
+        map.setView([e.latlng.lat,e.latlng.lng],25);
     });
     marker[i].on(`mouseover`,function(e) {
         e.target.openPopup();

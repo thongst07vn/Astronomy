@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS `constellar`;
 CREATE TABLE `constellar` (
-   `id` int AUTO_INCREMENT,
+   `id` int AUTO_INCREMENT PRIMARY KEY ,
   `abbr` varchar(3) DEFAULT NULL,
   `name` varchar(14) DEFAULT NULL,
   `symbolize` varchar(16) DEFAULT NULL,
@@ -16,7 +16,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `zodiac`;
 CREATE TABLE `zodiac` (
-  `id` int AUTO_INCREMENT PRIMARY KEY,
+  `id` int AUTO_INCREMENT PRIMARY KEY PRIMARY KEY,
   `name` varchar(11) DEFAULT NULL,
   `unicode_character` varchar(11) DEFAULT NULL,
   `gloss` varchar(39) DEFAULT NULL,
@@ -32,7 +32,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `blogsum`;
 CREATE TABLE `blogsum` (
-  `id` int AUTO_INCREMENT PRIMARY KEY,
+  `id` int AUTO_INCREMENT PRIMARY KEY PRIMARY KEY,
   `headtitle` varchar(70) DEFAULT NULL,
   `content` text,
   `imgtitle` varchar(65) DEFAULT NULL,
@@ -44,7 +44,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `observatory`;
 CREATE TABLE `observatory` (
-  `id` int AUTO_INCREMENT PRIMARY KEY,
+  `id` int AUTO_INCREMENT PRIMARY KEY PRIMARY KEY,
   `name` varchar(67) DEFAULT NULL,
   `instruments` varchar(14) DEFAULT NULL,
   `altitude` varchar(6) DEFAULT NULL,

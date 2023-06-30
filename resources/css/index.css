@@ -199,7 +199,7 @@ header > section:nth-child(1) > a > img, .footer section:nth-child(1)>a>img{
 .content {
   display: none;
   margin: 0;
-  padding: 20px 0px;
+  padding: 10px 0px;
   text-align: left;
   font-size: 20px;
   z-index: 1;
@@ -208,6 +208,7 @@ header > section:nth-child(1) > a > img, .footer section:nth-child(1)>a>img{
   height: 100px;
   min-width: 160px;
   z-index: 1;
+  backdrop-filter: blur(3px);
 }
 
 .content a{
