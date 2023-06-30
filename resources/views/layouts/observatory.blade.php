@@ -22,4 +22,5 @@
   </script>
 @vite(['resources/js/map.js'])
 </main>
+<x-footer menu="observatory"/>
 @endsection

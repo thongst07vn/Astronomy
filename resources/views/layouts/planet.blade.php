@@ -30,7 +30,5 @@
         </div>
     </div>
 </main>
-        <script>
-            
-        </script>
+<x-footer menu="astronomy"/>
 @endsection

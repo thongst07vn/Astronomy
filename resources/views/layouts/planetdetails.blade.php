@@ -32,7 +32,7 @@
                     </div>
                 
             </div>
-            <h2><ion-icon class="moon" name="moon"></ion-icon> History of Constellar <ion-icon class="moon" name="moon"></ion-icon></h2>
+            <h3><ion-icon class="moon" name="moon"></ion-icon> History of Constellar <ion-icon class="moon" name="moon"></ion-icon></h3>
             <div class="down-detail">
                 <div class="history-constellar">
                     <p>Gravity: {{$planets['gravity']}} m/s²</p>
@@ -47,4 +47,5 @@
         </div>
     </div>                     
 </main>
+<x-footer menu="astronomy"/>
 @endsection

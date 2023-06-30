@@ -88,4 +88,5 @@
                         @endif
                 @endforeach
             @endforeach
+<x-footer menu="astronomy"/>
 @endsection
