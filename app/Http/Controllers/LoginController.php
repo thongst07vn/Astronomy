@@ -15,7 +15,8 @@ class LoginController extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
     public function forgot(): View{
-        return view('forgot.forgot');
+        $tb = '';
+        return view('forgot.forgot',['tb'=>$tb]);
     }
     public function show(): View{
         return view('layouts.index');
@@ -29,7 +30,7 @@ class LoginController extends BaseController
         $repasswords = $REQUEST ->repasswords;   
         $mangcheckuser = DB::select("select * from Loginuser where username=?",[$username]);
         if(count($mangcheckuser)){
-            $tb = "Email Has Already Taken";
+            $tb = "Gmail Has Already Taken";
             return redirect('login')->with('tb',$tb);
         }else{
             if(!preg_match("/^([a-z0-9A-Z]+(@gmail)+(\.com))/i",$username)){
@@ -74,7 +75,7 @@ class LoginController extends BaseController
                 }
             }
         }else{
-            $tb = 'Email Incorrect';
+            $tb = 'Gmail Incorrect';
             return redirect('login')->with('tb',$tb);
         }
     }
@@ -88,10 +89,18 @@ class LoginController extends BaseController
         $text="ZXCVBNMASDFGHJKLQWERTYUIOP";
         $content =mt_rand(0,9).$text[rand(0, strlen($text) - 1)].mt_rand(0,9).$text[rand(0, strlen($text) - 1)];
         $tam = '';
+        $tb = '';
         $check =$REQUEST->session()->put('OTP',$content);
         $mailable = new ForgotPassword($content);
-        Mail::to($email)->send($mailable);
-        return view('forgot.OTP', ['tam'=>$tam]);
+        $manguser = DB::select("select username from Loginuser where username=?",[$email]);
+        if(count($manguser)){
+            Mail::to($email)->send($mailable);
+            return view('forgot.OTP', ['tam'=>$tam]);
+        }else{
+            $tb = 'Unregistered Gmail';
+            return view('forgot.forgot',['tb'=>$tb]);
+        }
+        
     }
     public function checkotp(Request $REQUEST):View{
         $otp = $REQUEST->session()->get('OTP');
@@ -109,15 +118,19 @@ class LoginController extends BaseController
         $passwords = $REQUEST ->passwords;
         $repasswords = $REQUEST ->repasswords;   
         if(!preg_match("/^(?=.{8,20})(?=.*[A-Z])(?=.*[0-9])/i",$passwords)){
-            return redirect()->back();
+            var_dump('k');
+            return back();
         }else{
             if($passwords == $repasswords){
                 DB::update(
                     'update Loginuser set passwords = ? where username = ?',[HASH::make($passwords),$email]
                 );
-                return redirect('index');
+                $tb='Change Password Successfully';
+                var_dump('g');
+                return redirect('login')->with('tb',$tb);
             }else{
-                return redirect()->back();
+                var_dump('m');
+                return back();
             }
         }
     }
