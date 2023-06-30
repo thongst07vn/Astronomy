@@ -85,12 +85,12 @@ class LoginController extends BaseController
     }
     public function forgotmail(Request $REQUEST):View{
         $email = $REQUEST->email;
-        $chekcemail=$REQUEST->session()->put('email',$email);
+        $chekcemail=session(['email'=>$email]);
         $text="ZXCVBNMASDFGHJKLQWERTYUIOP";
         $content =mt_rand(0,9).$text[rand(0, strlen($text) - 1)].mt_rand(0,9).$text[rand(0, strlen($text) - 1)];
         $tam = '';
         $tb = '';
-        $check =$REQUEST->session()->put('OTP',$content);
+        $check =session(['OTP'=>$content]);
         $mailable = new ForgotPassword($content);
         $manguser = DB::select("select username from Loginuser where username=?",[$email]);
         if(count($manguser)){
@@ -103,7 +103,7 @@ class LoginController extends BaseController
         
     }
     public function checkotp(Request $REQUEST):View{
-        $otp = $REQUEST->session()->get('OTP');
+        $otp = session('OTP');
         $tam = '';
         $number = ($REQUEST->one).($REQUEST->two).($REQUEST->three).($REQUEST->four);
         if($otp == $number){
@@ -114,11 +114,10 @@ class LoginController extends BaseController
         }
     }
     public function reset(Request $REQUEST){
-        $email=$REQUEST->session()->get('email');
+        $email=session('email');
         $passwords = $REQUEST ->passwords;
         $repasswords = $REQUEST ->repasswords;   
         if(!preg_match("/^(?=.{8,20})(?=.*[A-Z])(?=.*[0-9])/i",$passwords)){
-            var_dump('k');
             return back();
         }else{
             if($passwords == $repasswords){
@@ -126,10 +125,8 @@ class LoginController extends BaseController
                     'update Loginuser set passwords = ? where username = ?',[HASH::make($passwords),$email]
                 );
                 $tb='Change Password Successfully';
-                var_dump('g');
                 return redirect('login')->with('tb',$tb);
             }else{
-                var_dump('m');
                 return back();
             }
         }
