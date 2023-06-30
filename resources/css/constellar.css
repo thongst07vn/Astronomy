@@ -92,6 +92,7 @@ body {
 
 .nav-tabs {
     display: flex;
+    justify-content: center;
     list-style: none;
     margin: 30px;
     padding-bottom: 5px;
@@ -111,7 +112,6 @@ body {
     text-transform: uppercase;
     border: 1px solid #bebebe;
     color: white;
-    left: 470px;
     top: 5px;
    
 }

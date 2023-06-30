@@ -157,7 +157,7 @@ ul.month-stars li .star-top .star-img {
     width: 345px;
     height: 345px;
     object-fit: cover;
-    /* border-radius: 50%; */
+    border-radius: 50%;
 }
 
 ul.month-stars li .star-top .star-img img{

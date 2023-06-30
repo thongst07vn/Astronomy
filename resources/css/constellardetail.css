@@ -150,6 +150,7 @@ h3 {
     background-size: cover;
     transition: none 0s ease 0s;
     border: 2px solid white;
+    text-align: justify;
 }
 p{
     font-size: 20px;

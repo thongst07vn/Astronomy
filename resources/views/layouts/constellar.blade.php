@@ -24,8 +24,8 @@
                 <!-- TAB -->
                     <div class="tabs">
                         <ul class="nav-tabs">
-                            <li class="active"><a href="#content_1" >12 chòm cung hoàng đạo</a></li>
-                            <li><a href="#content_2">Các chòm sao khác</a></li>
+                            <li class="active"><a href="#content_1" >Zodiac</a></li>
+                            <li><a href="#content_2">Other Constellation</a></li>
                         </ul>
                         
                     
