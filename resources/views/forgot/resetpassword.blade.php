@@ -10,7 +10,7 @@
 <body>
     <section class="container" id="reset">
         <h2>Reset Password</h2>
-        <form action="resetpassword" method='post'>
+        <form action="" method='post'>
             <input type="password" placeholder="Password" name='passwords' autocomplete="off"/>
             <span><i class="fa-solid fa-eye-slash"></i></span>
             <input type="password" placeholder="Re-Password" name='repasswords' autocomplete="off"/>

@@ -9,7 +9,7 @@
 <body>
     <section class="container">
         <h2>OTP Verification</h2>
-        <form action="resetpassword" class="form-container" data-animate-effect="fadeIn">
+        <form action="resetpassword" method="post" class="form-container" data-animate-effect="fadeIn">
             <div class="alert alert-success" role="alert">Enter Your OTP</div>
             <ul id="otp">
                 <input type="text" id="one" name ="one" maxlength="1" autocomplete="off">

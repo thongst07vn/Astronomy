@@ -9,9 +9,10 @@
 <body>
     <section class="container">
         <h2>Forgot Password</h2>
-        <form action="/login/forgotpasswword/otp" class="form-container" data-animate-effect="fadeIn">
+        <form action="/login/forgotpasswword" method="post" class="form-container" data-animate-effect="fadeIn">
             <input type="email" class="form-control" id="email" name="email" placeholder="Email" autocomplete="off">
             <a href="/login">Return to  LogIn</a>
+            <span class="tb">{{$tb}}</span>
             <button type='submit' id='bt1'>Send</button>
         </form>
     </section>
