@@ -5,6 +5,7 @@
         <!-- Table Start -->
     <div class="container-fluid pt-4 px-4">
         <div class="row g-4">
+
             <div class="col-sm-12 col-xl-12">
                 <div class="bg-secondary rounded h-100 p-4">
                     <h6 class="mb-4">User Table</h6>
@@ -26,6 +27,7 @@
                     </table>
                 </div>
             </div>
+
             <div class="col-sm-12 col-xl-12">
                 <div class="bg-secondary rounded h-100 p-4">
                     <h6 class="mb-4">Blog Table&nbsp&nbsp<a href="/admin/form" class="fromblog"><i class="fa fa-light fa-circle-plus"></i></a></h6>
@@ -53,6 +55,7 @@
                     </table>
                 </div>
             </div>
+
             <div class="col-sm-12 col-xl-12">
                 <div class="bg-secondary rounded h-100 p-4">
                     <h6 class="mb-4">Observatory Table&nbsp&nbsp<a href="/admin/observatory" class="fromblog"><i class="fa fa-light fa-circle-plus"></i></a></h6>
@@ -84,6 +87,7 @@
                     </table>
                 </div>
             </div>
+
             <div class="col-sm-12 col-xl-12">
                 <div class="bg-secondary rounded h-100 p-4">
                     <h6 class="mb-4">Constellation Table</h6>
@@ -118,6 +122,7 @@
                     </table>
                 </div>
             </div>
+
             <div class="col-sm-12 col-xl-12">
                 <div class="bg-secondary rounded h-100 p-4">
                     <h6 class="mb-4">Zodiac Table</h6>
@@ -150,11 +155,10 @@
                     </table>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-12 col-xl-12">
+            
+            <div class="col-sm-12 col-xl-12">
                 <div class="bg-secondary rounded h-100 p-4">
-                    <h6 class="mb-4">Zodiac Table</h6>
-                    <table class="table">
+                    <h6 class="mb-4">Solar-system Table</h6>
                     <table class="table">
                         <thead>
                             <tr>
