@@ -35,7 +35,7 @@
                     </div>
                 
             </div>
-            <h2><ion-icon class="moon" name="moon"></ion-icon> History of Constellar <ion-icon class="moon" name="moon"></ion-icon></h2>
+            <h3><ion-icon class="moon" name="moon"></ion-icon> History of Constellar <ion-icon class="moon" name="moon"></ion-icon></h3>
             <div class="down-detail">
                 <div class="history-constellar">
                     <p>{{$value -> history}}</p>
@@ -76,7 +76,7 @@
                         <p>{{ucfirst(trans($value -> zodiac_element))}} <ion-icon class="star" name="star" ></ion-icon></p>
                     </div>
             </div>
-            <h2><ion-icon class="moon" name="moon"></ion-icon> History of Constellar <ion-icon class="moon" name="moon"></ion-icon></h2>
+            <h3><ion-icon class="moon" name="moon"></ion-icon> History of Constellar <ion-icon class="moon" name="moon"></ion-icon></h3>
             <div class="down-detail">
                 <div class="history-constellar">
                     <p>{{$value -> history}}</p>
@@ -88,4 +88,5 @@
                         @endif
                 @endforeach
             @endforeach
+<x-footer menu="astronomy"/>
 @endsection

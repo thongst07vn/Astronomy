@@ -13,7 +13,7 @@
                     <li>
                         <div class="star-item">
                             <div class="star-top">
-                                <a href="">
+                                <a href="/planet/{{$value['id']}}">
                                     <img src="{{asset($value['linkspic'])}}"  class="star-img">
                                 </a>
                                 <a href="/planet/{{$value['id']}}" class="choose-now">Choose now</a>
@@ -30,7 +30,5 @@
         </div>
     </div>
 </main>
-        <script>
-            
-        </script>
+<x-footer menu="astronomy"/>
 @endsection

@@ -31,9 +31,6 @@
             </label>
         </div>
     </div>
-    <div class="help-section">
-        <i data-open="info" class="fi-info"></i>
-    </div>
     <div class="intro-screen">
         <div class="intro-text">
             <div class="intro-heading">
@@ -56,28 +53,10 @@
     <div id="solar-system" class="scene"></div>
 </main>
 
-<nav id="info" class="reveal info-modal" data-reveal data-close-on-click="true">
-    <div class="project-info row collapse">
-        <h3>Project Info</h3>
-        <span class="small-3 columns">Universe Scale</span><span class="small-9 columns">6.30957344 &times; 10<sup>-5</sup></span>
-        <span class="small-3 columns">Orbit Scale</span><span class="small-9 columns">6.30957344 &times; 10<sup>-5</sup></span>
-        <span class="small-3 columns">Celestial Scale</span><span class="small-9 columns">1.2589254 &times; 10<sup>-4</sup></span>
-    </div>
-
-    <div class="project-info row collapse">
-        <h3>Controls</h3>
-        <span class="small-12 columns">Use your mouse or trackpad to navigate the scene. To zoom, use a scroll motion. When viewing a planet, you can move around a planet using a click + drag motion.</span>
-    </div>
-
-    <button class="close-button" data-close aria-label="Close modal" type="button">
-        <span aria-hidden="true">&times;</span>
-    </button>
-    <a id="info-got-it" class="button large" data-close="info">Close</a>
-</nav>
-
-<script type="text/javascript" href="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&subagency=EyesOnTheSolarSystem&dclink=true&sp=search,s,q&sdor=false&exts=tif,tiff" defer></script>
+<x-footer menu="index"/>
+    <script type="text/javascript" href="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&subagency=EyesOnTheSolarSystem&dclink=true&sp=search,s,q&sdor=false&exts=tif,tiff" defer></script>
     <script type="text/javascript" src="{{asset('src/app/vendor/jquery/dist/jquery.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('src/app/vendor/foundation-sites/dist/foundation.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('src/app/vendor/foundation-sites/dist/foundation.js')}}"></script>
     <script type="text/javascript" src="{{asset('src/app/vendor/stats/build/stats.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('src/app/vendor/tweenjs/build/tween.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('src/app/vendor/three.js/three.min.js')}}"></script>

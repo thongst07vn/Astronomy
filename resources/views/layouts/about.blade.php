@@ -67,4 +67,5 @@
       </div>    
   </div> 
 </main>
+<x-footer menu="about"/>
 @endsection

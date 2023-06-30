@@ -15,4 +15,5 @@
     </section>
     <section class="post-banner"></section>
 </main>
+<x-footer menu="blog"/>
 @endsection

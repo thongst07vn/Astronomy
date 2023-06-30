@@ -37,4 +37,5 @@
     </section>
     <section class="blog-banner"></section>
 </main>
+<x-footer menu="blog"/>
 @endsection
