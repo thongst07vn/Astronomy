@@ -16,22 +16,22 @@
                 </div>
                 
                     <div class="cons-in1">
-                        <p>{{$value -> abbr}}</p>
+                        <p>Abbreviations: {{$value -> abbr}}</p>
                     </div>
                     <div class="cons-in2">
-                        <p>{{$value -> name}}</p>
+                        <p>Name: {{$value -> name}}</p>
                     </div>
                     <div class="cons-in3">
-                        <p>{{$value -> symbolize}}</p>
+                        <p>Symbolize: {{$value -> symbolize}}</p>
                     </div>
                     <div class="cons-in4">
-                        <p>{{$value -> acreage}}</p>
+                        <p>Acreage: {{$value -> acreage}}</p>
                     </div>
                     <div class="cons-in5">
-                        <p>{{$value -> discovered_by}}</p>
+                        <p>Discovered by: {{$value -> discovered_by}}</p>
                     </div>
                     <div class="cons-in6">
-                        <p>{{$value -> discovered_date}}</p>
+                        <p>Discovered date: {{$value -> discovered_date}}</p>
                     </div>
                 
             </div>

@@ -16,7 +16,7 @@
                         <p>Name: {{$planets['name']}} <ion-icon class="star" name="star" ></ion-icon></p>
                     </div>
                     <div class="cons-in2">
-                        <p>discovered_date: {{$planets['discovered_date']}} <ion-icon class="star" name="star" ></ion-icon></p>
+                        <p>Discovered date: {{$planets['discovered_date']}} <ion-icon class="star" name="star" ></ion-icon></p>
                     </div>
                     <div class="cons-in3">
                         <p>Diameter: {{$planets['diameter']}} Km<ion-icon class="star" name="star" ></ion-icon></p>
