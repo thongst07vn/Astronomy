@@ -30,11 +30,11 @@
                         </div>
                         <div class="mb-3">
                             <label for="lat" class="form-label">LAT: </label>    
-                            <input type="number" id="lat" name="lat" class="form-control" autocomplete="off">
+                            <input type="number" id="lat" name="lat" class="form-control" min="-180" max="180" step=0.000000001 autocomplete="off">
                         </div>
                         <div class="mb-3">
                             <label for="long" class="form-label">LNG: </label>    
-                            <input type="number" id="long" name="long" class="form-control" autocomplete="off">
+                            <input type="number" id="long" name="long" class="form-control" min="-180" max="180" step=0.000000001 autocomplete="off">
                         </div>
                         <button type="submit">Create</button>
                     </form>
