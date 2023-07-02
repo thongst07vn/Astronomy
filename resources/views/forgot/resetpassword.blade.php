@@ -21,7 +21,7 @@
                 <li><i class="fa-solid fa-x"></i> 8 - 20 Characters</li>
                 <li>incorrect Re-Password</li>
             </ul>
-            <button type='submit'>Sign Up</button>
+            <button type='submit'>Submit</button>
 		</form>
     </section>
 </body>

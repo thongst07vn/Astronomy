@@ -128,7 +128,7 @@ a > img{
 /*** Navbar ***/
 .sidebar .navbar .navbar-nav .nav-link {
     padding: 7px 20px !important;
-    color: var(--light);
+    color: white;
     margin-left: 0 !important;
     font-weight: 500;
     border-left: 3px solid var(--secondary);
@@ -303,8 +303,8 @@ a > img{
     border-color: var(--primary);
 }
 span > a{
-    color: var(--light);
+    color: white;
 }
 span > a:hover{
-    color: var(--light);
+    color: white;
 }
