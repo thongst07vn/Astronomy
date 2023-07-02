@@ -117,7 +117,7 @@ class AdminController extends Controller
         $description = $REQUEST -> description;
         $lat = $REQUEST -> lat;
         $lng = $REQUEST -> long;
-        DB::insert("insert into observatory(name, instruments, altitude, type, descriptionsource, lat, lng) values (?,?,?,?,?,?,?)",[$nameo, $instruments, $altitude, $type, $description, $lat, $lng]);
+        DB::insert("insert into observatory(name, instruments, altitude, type, descriptionsource, lat, lng) values (?,?,?,?,?,?,?)",[$nameo, $instruments, $altitude, $type, $description,$lng ,$lat]);
         return back();
     }
     public function delete(int $id){

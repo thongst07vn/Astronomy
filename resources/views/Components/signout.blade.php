@@ -1,5 +1,6 @@
 @vite(['resources/js/avt.js'])
 <nav class="logout">
+    @vite(['resources/js/avt.js'])
     <div class="dropdown">
         <span class="dropbtn"><img src="{{asset($avt)}}"></span>
         <form action="/" method="post" enctype="multipart/form-data">
