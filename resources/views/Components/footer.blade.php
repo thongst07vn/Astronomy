@@ -53,13 +53,13 @@
 
                 <ul class="nav__ul">
                     <li>
-                    <span><i class="fas fa-home"></i></span><span>Astronomy VN LLC, 35/6 D5 Street, Ward 25, Binh Thanh District, Ho Chi Minh City</span>
+                    <span><i class="fas fa-home"></i></span><span>&nbsp&nbspAstronomy VN LLC, 35/6 D5 Street, Ward 25, Binh Thanh District, Ho Chi Minh City</span>
                     </li>
                     <li>
-                    <span><i class="fas fa-envelope"></i></span><span> Astronomy@gmail.com</span>
+                    <span><i class="fas fa-envelope"></i></span><span>&nbsp&nbspAstronomy@gmail.com</span>
                     </li>
                     <li>
-                    <span><i class="fas fa-phone"></i></span><span> +84 949 258 999</span>
+                    <span><i class="fas fa-phone"></i></span><span>&nbsp&nbsp+84 949 258 999</span>
                     </li>
                 </ul>
             </li>
