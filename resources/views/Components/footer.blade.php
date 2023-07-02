@@ -12,7 +12,7 @@
 
                 <ul class="nav__ul">
                     <li>
-                    <span><i class="fas fa-home"></i></span><span> 35/6 Đường D5, Phường 25, Bình Thạnh, Thành phố Hồ Chí Minh 72308, Việt Nam</span>
+                    <span><i class="fas fa-home"></i></span><span>Astronomy VN LLC, 35/6 D5 Street, Ward 25, Binh Thanh District, Ho Chi Minh City</span>
                     </li>
                     <li>
                     <span><i class="fas fa-envelope"></i></span><span> Astronomy@gmail.com</span>
@@ -26,19 +26,8 @@
             <li class="nav__item nav__item--extra">
                 <h2 class="nav__title">About company</h2>
                 <ul class="nav__ul nav__ul--extra">
-                    <li>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.</li>
-                    <li>Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias.</li>
-                    <li>
-                        <!-- Facebook -->
-                        <a type="button" ><i class="fab fa-facebook-f"></i></a>
-                        <!-- Dribbble -->
-                        <a type="button" ><i class="fab fa-dribbble"></i></a>
-                        <!-- Twitter -->
-                        <a type="button" ><i class="fab fa-twitter"></i></a>
-                        <!-- Google + -->
-                        <a type="button" ><i class="fab fa-google-plus-g"></i></a>
-                        <!-- Linkedin -->
-                    </li>
+                <li>The website is provide user friendly environment and navigation. The website provide brief details about few facts and details about astronomy.</li>
+                    <li>Astronomy is the study of the sun, moon, stars, planets, comets, gas, dust and other non-Earthly bodies and phenomena.</li>
                 </ul>
             </li>
             
@@ -64,7 +53,7 @@
 
                 <ul class="nav__ul">
                     <li>
-                    <span><i class="fas fa-home"></i></span><span> 35/6 Đường D5, Phường 25, Bình Thạnh, Thành phố Hồ Chí Minh 72308, Việt Nam</span>
+                    <span><i class="fas fa-home"></i></span><span>Astronomy VN LLC, 35/6 D5 Street, Ward 25, Binh Thanh District, Ho Chi Minh City</span>
                     </li>
                     <li>
                     <span><i class="fas fa-envelope"></i></span><span> Astronomy@gmail.com</span>
@@ -78,26 +67,15 @@
             <li class="nav__item nav__item--extra">
                 <h2 class="nav__title">About company</h2>
                 <ul class="nav__ul nav__ul--extra">
-                    <li>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.</li>
-                    <li>Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias.</li>
-                    <li>
-                        <!-- Facebook -->
-                        <a type="button" ><i class="fab fa-facebook-f"></i></a>
-                        <!-- Dribbble -->
-                        <a type="button" ><i class="fab fa-dribbble"></i></a>
-                        <!-- Twitter -->
-                        <a type="button" ><i class="fab fa-twitter"></i></a>
-                        <!-- Google + -->
-                        <a type="button" ><i class="fab fa-google-plus-g"></i></a>
-                        <!-- Linkedin -->
-                    </li>
+                    <li>The website is provide user friendly environment and navigation. The website provide brief details about few facts and details about astronomy.</li>
+                    <li>Astronomy is the study of the sun, moon, stars, planets, comets, gas, dust and other non-Earthly bodies and phenomena.</li>
                 </ul>
             </li>
             
             <li class="nav__item">
                 <h2 class="nav__title">Legal</h2>       
                 <ul class="nav__ul">
-                    <li><a href="contact">About Us</a></li>
+                    <li><a href="/about">About Us</a></li>
                 </ul>
             </li>
         </ul>

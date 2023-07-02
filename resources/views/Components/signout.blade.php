@@ -1,3 +1,4 @@
+@vite(['resources/js/avt.js'])
 <nav class="logout">
     <div class="dropdown">
         <span class="dropbtn"><img src="{{asset($avt)}}"></span>

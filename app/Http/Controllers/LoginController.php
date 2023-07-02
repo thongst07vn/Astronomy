@@ -109,7 +109,7 @@ class LoginController extends BaseController
         if($otp == $number){
             return view('forgot.resetpassword');
         }else { 
-            $tam = "Sai OTP";
+            $tam = "OTP incorrect";
             return view('forgot.OTP',['tam' => $tam]);
         }
     }
