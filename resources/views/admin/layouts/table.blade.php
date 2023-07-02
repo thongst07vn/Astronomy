@@ -178,7 +178,7 @@
                                 <td>{{$planet['atmosphere']}}</td>
                                 <td>{{$planet['diameter']}}</td>
                                 <td>{{$planet['distanceFromParent']}}</td>
-                                <td><img src="{{asset($planet['linkspic'])}}" alt="" style="width: 106px; height: 65px; object-fit: cover;"></td>
+                                    td><img src="{{asset($planet['linkspic'])}}" alt="" style="width: 106px; height: 65px; object-fit: cover;"></td>
                             </tr>
                         @endforeach
                         </tbody>
