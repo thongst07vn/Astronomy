@@ -1,3 +1,4 @@
+@vite(['resources/js/avt.js'])
 <nav class="logout">
     @vite(['resources/js/avt.js'])
     <div class="dropdown">

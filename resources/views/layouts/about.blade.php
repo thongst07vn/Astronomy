@@ -28,9 +28,9 @@
                                           <p>Astronomy VN LLC, 35/6 D5 Street, Ward 25, Binh Thanh District, Ho Chi Minh City</p>
                                       </li>
                                       <li>Phone: You can reach us at the following phone number
-                                          <p>Astronomy.test/office: +8 (123) 456-8888.</p>
+                                          <p>Astronomy.test: +84 949 258 999.</p>
                                       </li>
-                                      <li>Email: If you have any questions, concerns, or feedback regarding our contact, please feel free to contact us at: Astronomy@spaces.com and info@spaces.com.</li>
+                                      <li>Email: If you have any questions, concerns, or feedback regarding our contact, please feel free to contact us at: Astronomy@gmail.com</li>
                                   </ul>
                               <h3>3.Frequently asked question:</h3>
                           <ul>
